@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kit Miragem × Huambo — Guia de Equipamento</title>
+<meta name="description" content="Guia de compra do equipamento fotográfico e de vídeo para a produção documental do Hotel Miragem e do Planalto Central do Huambo: modelos, preços, links de compra e orçamento em tempo real.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23A8452A'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23F2ECDE' font-family='Georgia,serif'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,440;0,9..144,560;0,9..144,650;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EAE3D3;
+    --paper-raised:#F5F0E5;
+    --ink:#2A2118;
+    --ink-soft:#5B5346;
+    --line:#D8CFB9;
+    --brick:#A8452A;
+    --brick-deep:#7F3320;
+    --green:#4B5A3A;
+    --indigo:#2E4057;
+    --white:#FFFDF9;
+    --radius-sm:3px;
+    --radius-md:6px;
+    --maxw:1180px;
+    --sidebar-w:320px;
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:"IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    --font-mono:"IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  .skip-link{
+    position:absolute; left:-9999px; top:0; z-index:200;
+    background:var(--ink); color:var(--white); padding:.75em 1em; border-radius:0 0 var(--radius-sm) 0;
+  }
+  .skip-link:focus{ left:0; }
+
+  a{ color:var(--indigo); }
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2.5px solid var(--indigo); outline-offset:2px;
+  }
+
+  .visually-hidden{
+    position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  /* ---------- layout shell ---------- */
+  .layout{
+    display:grid;
+    grid-template-columns:var(--sidebar-w) 1fr;
+    min-height:100vh;
+    align-items:start;
+  }
+
+  .sidebar{
+    position:sticky; top:0; align-self:start; height:100vh;
+    border-right:1px solid var(--line);
+    background:var(--paper-raised);
+    overflow-y:auto;
+  }
+  .sidebar-inner{ padding:28px 24px 40px; display:flex; flex-direction:column; gap:26px; }
+
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-mark{
+    width:38px; height:38px; border-radius:var(--radius-md);
+    background:var(--brick); color:var(--paper-raised);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display); font-weight:650; font-size:1.1rem; flex:none;
+  }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.2; }
+  .brand-text strong{ font-family:var(--font-display); font-weight:650; font-size:1.05rem; }
+  .brand-text span{ font-size:.8rem; color:var(--ink-soft); }
+
+  .search-field{
+    display:flex; align-items:center; gap:8px;
+    border:1px solid var(--line); border-radius:var(--radius-md);
+    background:var(--white); padding:9px 12px;
+  }
+  .search-field svg{ flex:none; color:var(--ink-soft); }
+  .search-field input{
+    border:0; background:transparent; outline:0; width:100%;
+    font-family:var(--font-body); font-size:.92rem; color:var(--ink);
+  }
+  .search-field input::placeholder{ color:#948C7B; }
+
+  .cat-nav{ display:flex; flex-direction:column; gap:2px; }
+  .cat-nav a{
+    display:flex; justify-content:space-between; gap:10px;
+    padding:7px 10px; border-radius:var(--radius-sm);
+    text-decoration:none; color:var(--ink); font-size:.9rem;
+    border-left:2px solid transparent;
+  }
+  .cat-nav a:hover{ background:rgba(168,69,42,.08); }
+  .cat-nav a.is-active{
+    border-left-color:var(--brick); background:rgba(168,69,42,.1); font-weight:500;
+  }
+  .cat-nav a.is-empty{ opacity:.35; }
+  .cat-nav .count{
+    font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft);
+    background:var(--paper); border-radius:20px; padding:1px 7px; min-width:1.6em; text-align:center;
+  }
+  .cat-nav a.is-active .count{ color:var(--brick-deep); }
+
+  .budget-panel{
+    border:1px solid var(--line); border-radius:var(--radius-md);
+    background:var(--white); padding:18px 18px 16px;
+  }
+  .budget-panel h2{
+    margin:0 0 4px; font-family:var(--font-body); font-weight:600; font-size:.82rem;
+    text-transform:none; color:var(--ink-soft); letter-spacing:.01em;
+  }
+  .budget-range{
+    margin:2px 0 0; font-family:var(--font-mono); font-size:1.5rem; font-weight:500;
+    color:var(--brick-deep); font-variant-numeric:tabular-nums;
+  }
+  .budget-kz{ margin:2px 0 12px; font-size:.85rem; color:var(--ink-soft); font-variant-numeric:tabular-nums; }
+  .fx-field{ display:block; font-size:.78rem; color:var(--ink-soft); margin-bottom:12px; }
+  .fx-field-row{ display:flex; align-items:center; gap:8px; margin-top:4px; }
+  .fx-field-row span{ font-size:.78rem; color:var(--ink-soft); }
+  .fx-field input{
+    width:78px; padding:5px 7px; border:1px solid var(--line); border-radius:var(--radius-sm);
+    font-family:var(--font-mono); font-size:.85rem; background:var(--paper-raised);
+  }
+  .budget-count{ font-size:.8rem; color:var(--ink-soft); margin:0 0 14px; }
+  .budget-actions{ display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--font-body); font-size:.82rem; font-weight:500; cursor:pointer;
+    border-radius:var(--radius-sm); padding:8px 12px; border:1px solid var(--line);
+    background:var(--paper-raised); color:var(--ink);
+  }
+  .btn:hover{ border-color:var(--brick); }
+  .btn.primary{ background:var(--ink); border-color:var(--ink); color:var(--white); }
+  .btn.primary:hover{ background:var(--brick-deep); border-color:var(--brick-deep); }
+  .budget-note{
+    margin:0; font-size:.76rem; line-height:1.5; color:var(--ink-soft);
+    border-top:1px dashed var(--line); padding-top:12px;
+  }
+
+  .mobile-bar{ display:none; }
+
+  /* ---------- main ---------- */
+  main{ min-width:0; }
+  .hero{
+    max-width:var(--maxw); margin:0 auto; padding:64px 48px 40px;
+  }
+  .hero h1{
+    font-family:var(--font-display); font-weight:650; font-optical-sizing:auto;
+    font-size:clamp(2rem, 4.2vw, 3.15rem); line-height:1.08; margin:0 0 20px; max-width:16ch;
+    color:var(--ink);
+  }
+  .hero .lead{
+    font-size:1.08rem; max-width:62ch; color:var(--ink-soft); margin:0 0 30px;
+  }
+  .hero-stats{ display:flex; gap:40px; flex-wrap:wrap; margin:0; }
+  .hero-stats div{ display:flex; flex-direction:column; gap:2px; }
+  .hero-stats dt{
+    font-family:var(--font-display); font-weight:650; font-size:2rem; color:var(--brick);
+  }
+  .hero-stats dd{ margin:0; font-size:.85rem; color:var(--ink-soft); max-width:16ch; }
+
+  .category{
+    max-width:var(--maxw); margin:0 auto; padding:36px 48px;
+    border-top:1px solid var(--line);
+    scroll-margin-top:24px;
+  }
+  .cat-head{ max-width:70ch; margin-bottom:26px; }
+  .cat-head h2{
+    font-family:var(--font-display); font-weight:600; font-size:1.5rem; margin:0 0 8px;
+    display:flex; align-items:baseline; gap:12px;
+  }
+  .cat-head .num{ font-family:var(--font-mono); font-size:.95rem; color:var(--brick); font-weight:500; }
+  .cat-head p{ margin:0; color:var(--ink-soft); font-size:.98rem; }
+
+  .items{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+  .item{
+    display:grid; grid-template-columns:34px 1fr; gap:4px 14px;
+    padding:18px 0; border-top:1px solid var(--line);
+  }
+  .items .item:first-child{ border-top:0; }
+
+  .item-select{ padding-top:3px; }
+  .item-select input[type="checkbox"], .item-select input[type="radio"]{
+    width:18px; height:18px; accent-color:var(--brick); cursor:pointer;
+  }
+
+  .item-toggle{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; cursor:pointer; }
+  .item-toggle h3{
+    font-family:var(--font-display); font-weight:560; font-size:1.08rem; margin:0; color:var(--ink);
+  }
+  .item-model{ font-size:.82rem; color:var(--ink-soft); }
+
+  .item-desc{ margin:8px 0 0; max-width:66ch; color:var(--ink-soft); font-size:.94rem; }
+
+  .item-variant{ display:flex; gap:6px; margin-top:10px; }
+  .variant-btn{
+    font-family:var(--font-body); font-size:.78rem; padding:5px 10px; border-radius:20px;
+    border:1px solid var(--line); background:var(--paper-raised); color:var(--ink-soft); cursor:pointer;
+  }
+  .variant-btn.is-active{ background:var(--indigo); border-color:var(--indigo); color:var(--white); }
+
+  .item-footer{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 18px;
+    margin-top:12px;
+  }
+  .item-price{
+    font-family:var(--font-mono); font-size:.92rem; color:var(--brick-deep);
+    font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  .item-links{ display:flex; gap:8px; flex-wrap:wrap; }
+  .item-links a{
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:.8rem; text-decoration:none; color:var(--ink);
+    border:1px solid var(--line); border-radius:20px; padding:5px 11px;
+    background:var(--white);
+  }
+  .item-links a:hover{ border-color:var(--brick); color:var(--brick-deep); }
+  .item-links svg{ width:11px; height:11px; flex:none; }
+
+  .item.is-hidden{ display:none; }
+  .category.is-hidden{ display:none; }
+
+  .drone-note{
+    margin-top:8px; font-size:.82rem; color:var(--ink-soft); max-width:66ch;
+  }
+
+  footer.site-footer{
+    max-width:var(--maxw); margin:0 auto; padding:40px 48px 80px;
+    border-top:1px solid var(--line);
+    color:var(--ink-soft); font-size:.85rem;
+  }
+  footer.site-footer p{ max-width:66ch; }
+
+  .toast{
+    position:fixed; bottom:24px; left:50%; transform:translate(-50%, 12px);
+    background:var(--ink); color:var(--white); padding:10px 18px; border-radius:20px;
+    font-size:.85rem; opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease;
+    z-index:300;
+  }
+  .toast.is-visible{ opacity:1; transform:translate(-50%,0); }
+
+
+  /* ---------- prioridade ---------- */
+  .badge{
+    display:inline-block; font-family:var(--font-body); font-size:.7rem; font-weight:600;
+    padding:2px 9px; border-radius:20px; line-height:1.5; white-space:nowrap;
+  }
+  .badge-essencial{ background:var(--brick); color:#fff; }
+  .badge-importante{ background:var(--indigo); color:#fff; }
+  .badge-recomendado{ background:rgba(75,90,58,.14); color:#3B4A2B; border:1px solid rgba(75,90,58,.5); }
+  .badge-opcional{ background:transparent; color:var(--ink-soft); border:1px dashed #948C7B; }
+
+  .side-label{ margin:0 0 8px; font-size:.78rem; font-weight:600; color:var(--ink-soft); }
+  .prio-filter{ display:flex; flex-wrap:wrap; gap:6px; }
+  .chip{
+    font-family:var(--font-body); font-size:.78rem; padding:5px 11px; border-radius:20px;
+    border:1px solid var(--line); background:var(--white); color:var(--ink); cursor:pointer;
+  }
+  .chip:hover{ border-color:var(--brick); }
+  .chip[aria-pressed="true"]{ background:var(--ink); border-color:var(--ink); color:var(--white); }
+
+  .tier-breakdown{
+    list-style:none; margin:0 0 16px; padding:12px 0 0; border-top:1px dashed var(--line);
+    display:flex; flex-direction:column; gap:7px;
+  }
+  .tier-breakdown li{ display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:.78rem; }
+  .tier-breakdown li span:last-child{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; color:var(--ink-soft); text-align:right; }
+  .presets{ display:flex; flex-direction:column; gap:6px; margin-bottom:8px; }
+  .presets .btn{ text-align:left; }
+  .preset-hint{ margin:0 0 14px; font-size:.74rem; color:var(--ink-soft); line-height:1.45; }
+
+  .priority-guide{ max-width:var(--maxw); margin:0 auto; padding:8px 48px 40px; }
+  .priority-guide h2{ font-family:var(--font-display); font-weight:600; font-size:1.3rem; margin:0 0 6px; }
+  .priority-guide > p{ margin:0; max-width:64ch; color:var(--ink-soft); font-size:.96rem; }
+  .prio-list{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px 36px; margin:22px 0 0; }
+  .prio-list > div{ display:flex; flex-direction:column; gap:6px; align-items:flex-start; }
+  .prio-list dt{ margin:0; }
+  .prio-list dd{ margin:0; font-size:.9rem; color:var(--ink-soft); max-width:46ch; }
+
+  .item-cut{
+    margin:9px 0 0; max-width:66ch; font-size:.85rem; color:var(--ink-soft);
+    border-left:2px solid var(--line); padding-left:10px;
+  }
+  .item-cut strong{ font-weight:600; color:var(--ink); }
+
+  .empty-state{
+    max-width:var(--maxw); margin:0 auto; padding:40px 48px; color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+  .empty-state[hidden]{ display:none; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px){
+    .layout{ grid-template-columns:1fr; }
+    .sidebar{
+      position:fixed; inset:0 0 0 auto; width:min(340px, 88vw); height:100dvh;
+      transform:translateX(100%); transition:transform .25s ease; z-index:150;
+      box-shadow:-8px 0 30px rgba(0,0,0,.18);
+    }
+    .sidebar.is-open{ transform:translateX(0); }
+    .mobile-bar{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      position:sticky; top:0; z-index:120; background:var(--paper-raised);
+      border-bottom:1px solid var(--line); padding:12px 16px;
+    }
+    .mobile-bar .brand{ gap:8px; }
+    .mobile-bar .brand-mark{ width:30px; height:30px; font-size:.9rem; }
+    .mobile-bar .brand-text strong{ font-size:.92rem; }
+    .mobile-bar .brand-text span{ display:none; }
+    .sidebar-scrim{
+      position:fixed; inset:0; background:rgba(20,16,10,.35); z-index:140;
+      opacity:0; pointer-events:none; transition:opacity .2s ease;
+    }
+    .sidebar-scrim.is-open{ opacity:1; pointer-events:auto; }
+    .hero{ padding:36px 22px 28px; }
+    .priority-guide{ padding:4px 22px 28px; }
+    .prio-list{ grid-template-columns:1fr; }
+    .empty-state{ padding:28px 22px; }
+    .category{ padding:28px 22px; }
+    footer.site-footer{ padding:28px 22px 60px; }
+    .hero-stats{ gap:26px; }
+  }
+
+  @media (max-width: 520px){
+    .item{ grid-template-columns:26px 1fr; }
+    .item-select input{ width:16px; height:16px; }
+    .item-footer{ align-items:flex-start; flex-direction:column; }
+  }
+
+  @media print{
+    .sidebar, .mobile-bar, .toast{ display:none !important; }
+    .layout{ display:block; }
+    a{ color:var(--ink); text-decoration:underline; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+<div class="sidebar-scrim" id="scrim"></div>
+
+<div class="layout">
+
+  <div class="mobile-bar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <div class="brand-text"><strong>Miragem × Huambo</strong><span>Guia de equipamento</span></div>
+    </div>
+    <button class="btn primary" id="openSidebar" type="button" aria-controls="sidebar" aria-expanded="false">Filtrar e orçamento</button>
+  </div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Procura e orçamento">
+    <div class="sidebar-inner">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <div class="brand-text"><strong>Miragem × Huambo</strong><span>Guia de equipamento</span></div>
+        </div>
+        <button class="btn" id="closeSidebar" type="button" style="display:none;">Fechar</button>
+      </div>
+
+      <label class="search-field">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="searchInput" placeholder="Procurar por nome, marca, modelo…" aria-label="Procurar equipamento">
+      </label>
+
+      <div>
+        <p class="side-label" id="prioFilterLabel">Filtrar por prioridade</p>
+        <div class="prio-filter" role="group" aria-labelledby="prioFilterLabel" id="prioFilter">
+          <button type="button" class="chip" data-prio="all" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-prio="essencial" aria-pressed="false">Essencial</button>
+          <button type="button" class="chip" data-prio="importante" aria-pressed="false">Importante</button>
+          <button type="button" class="chip" data-prio="recomendado" aria-pressed="false">Recomendado</button>
+          <button type="button" class="chip" data-prio="opcional" aria-pressed="false">Opcional</button>
+        </div>
+      </div>
+
+      <nav class="cat-nav" id="catNav" aria-label="Categorias de equipamento">
+        <a href="#camara" data-cat-id="camara">Câmara <span class="count" data-nav-count="camara">1</span></a>
+        <a href="#lentes" data-cat-id="lentes">Lentes <span class="count" data-nav-count="lentes">2</span></a>
+        <a href="#audio" data-cat-id="audio">Áudio <span class="count" data-nav-count="audio">3</span></a>
+        <a href="#monitorizacao" data-cat-id="monitorizacao">Monitorização <span class="count" data-nav-count="monitorizacao">2</span></a>
+        <a href="#iluminacao" data-cat-id="iluminacao">Iluminação <span class="count" data-nav-count="iluminacao">6</span></a>
+        <a href="#energia" data-cat-id="energia">Energia <span class="count" data-nav-count="energia">3</span></a>
+        <a href="#armazenamento" data-cat-id="armazenamento">Armazenamento <span class="count" data-nav-count="armazenamento">2</span></a>
+        <a href="#suporte" data-cat-id="suporte">Suporte <span class="count" data-nav-count="suporte">1</span></a>
+        <a href="#chuva" data-cat-id="chuva">Proteção — chuva <span class="count" data-nav-count="chuva">3</span></a>
+        <a href="#drone" data-cat-id="drone">Drone <span class="count" data-nav-count="drone">1</span></a>
+        <a href="#humidade" data-cat-id="humidade">Proteção — humidade <span class="count" data-nav-count="humidade">2</span></a>
+      </nav>
+
+      <div class="budget-panel">
+        <h2>Orçamento em tempo real</h2>
+        <p class="budget-range" id="budgetUSD">US$0 – 0</p>
+        <p class="budget-kz" id="budgetKz">≈ Kz 0 – 0</p>
+
+        <label class="fx-field">
+          Câmbio de referência (ajustável)
+          <span class="fx-field-row">
+            <span>1 USD =</span>
+            <input type="number" id="fxRate" value="920" min="1" step="1" inputmode="numeric">
+            <span>Kz</span>
+          </span>
+        </label>
+
+        <p class="budget-count" id="budgetCount">0 de 0 itens selecionados</p>
+
+        <ul class="tier-breakdown" aria-label="Total por prioridade">
+          <li><span class="badge badge-essencial">Essencial</span><span data-tier-total="essencial">—</span></li>
+          <li><span class="badge badge-importante">Importante</span><span data-tier-total="importante">—</span></li>
+          <li><span class="badge badge-recomendado">Recomendado</span><span data-tier-total="recomendado">—</span></li>
+          <li><span class="badge badge-opcional">Opcional</span><span data-tier-total="opcional">—</span></li>
+        </ul>
+
+        <p class="side-label">Cenários rápidos</p>
+        <div class="presets">
+          <button class="btn" type="button" data-preset="essencial">Só o essencial</button>
+          <button class="btn" type="button" data-preset="importante">Essencial + importante</button>
+          <button class="btn" type="button" id="resetBtn" data-preset="completo">Kit completo</button>
+        </div>
+        <p class="preset-hint">O drone acompanha o cenário: nenhum, Mini 4K ou Neo 2. Depois pode ajustar item a item.</p>
+
+        <div class="budget-actions">
+          <button class="btn primary" id="copyBtn" type="button">Copiar resumo</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main id="conteudo">
+
+    <header class="hero">
+      <h1>Equipamento para contar o Huambo sem atalhos.</h1>
+      <p class="lead">Guia de compra para a produção documental do Hotel Miragem e do Planalto Central: sete dias de captação entre o hotel, a cidade, a natureza e o património, em plena época chuvosa. Cada item tem o modelo exato, o preço observado e dois links para comparar e comprar — sem precisar de mais pesquisa.</p>
+      <dl class="hero-stats">
+        <div><dt>7</dt><dd>dias de produção no terreno</dd></div>
+        <div><dt>11</dt><dd>frentes de equipamento cobertas</dd></div>
+        <div><dt>2</dt><dd>lojas por item, para comparar preço</dd></div>
+      </dl>
+    </header>
+
+
+    <section class="priority-guide" aria-labelledby="pg-title">
+      <h2 id="pg-title">Como decidir se o orçamento apertar</h2>
+      <p>Cada item tem uma etiqueta de prioridade e uma linha “Se cortar” que explica o que se perde sem ele. Comece pelo essencial e vá acrescentando por ordem, ou use os cenários rápidos na barra lateral.</p>
+      <dl class="prio-list">
+        <div><dt><span class="badge badge-essencial">Essencial</span></dt><dd>Sem isto a produção não corre, ou o material captado fica em risco. Não cortar.</dd></div>
+        <div><dt><span class="badge badge-importante">Importante</span></dt><dd>Muda de forma clara o resultado final. Cortar só se não houver outra saída.</dd></div>
+        <div><dt><span class="badge badge-recomendado">Recomendado</span></dt><dd>Melhora o conforto ou a qualidade, mas o projeto corre sem isto.</dd></div>
+        <div><dt><span class="badge badge-opcional">Opcional</span></dt><dd>Reforço para situações específicas. É o primeiro a sair.</dd></div>
+      </dl>
+    </section>
+
+    <!-- 1. CÂMARA -->
+    <section class="category" id="camara" data-cat="camara">
+      <div class="cat-head">
+        <h2><span class="num">01</span> Câmara</h2>
+        <p>Um único corpo para os sete dias — sem trocar de sistema a meio da estrada nem duplicar carregadores e baterias.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i01" class="toggle" data-min="1398" data-max="1498" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i01">
+              <h3>Sony a6700</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Corpo, ILCE-6700, preto</span>
+            </label>
+            <p class="item-desc">26MP APS-C, 4K 120p em 10-bit 4:2:2, estabilização IBIS de 5 eixos — a base de todo o kit.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Sem corpo não há produção; é a base de todo o resto.</p>
+            <div class="item-footer">
+              <div class="item-price">US$1.398 – 1.498</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/dp/B0CBR8W12R" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/used/1776281/sony_a6700_mirrorless_camera.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2. LENTES -->
+    <section class="category" id="lentes" data-cat="lentes">
+      <div class="cat-head">
+        <h2><span class="num">02</span> Lentes</h2>
+        <p>Duas lentes cobrem quase tudo: uma versátil para o dia a dia, outra grande angular para quando a paisagem — Morro do Moco, planaltos, rios — exige mais grandeza.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i02" class="toggle" data-min="599" data-max="650" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i02">
+              <h3>Tamron 17–70mm f/2.8 Di III-A VC RXD</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Montagem Sony E, modelo B070 / AFB070S-700</span>
+            </label>
+            <p class="item-desc">Lente principal — fica na câmara cerca de 80% do tempo, do retrato ao plano geral.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Perde-se a lente que fica na câmara cerca de 80% do tempo, e o kit não tem outra igual.</p>
+            <div class="item-footer">
+              <div class="item-price">US$599 – 650</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1609642-REG" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/collections/all/products/tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-lens-for-sony-e" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i03" class="toggle" data-min="600" data-max="700" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i03">
+              <h3>Sony E 11mm f/1.8</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">SEL11F18</span>
+            </label>
+            <p class="item-desc">Grande angular para paisagem e montanha — cobre o vazio que o Tamron sozinho deixa nos dias de natureza.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos 17mm do Tamron. A versão usada reduz o custo sem tirar o item.</p>
+            <div class="item-variant" role="group" aria-label="Condição da lente 11mm">
+              <button type="button" class="variant-btn is-active" data-target="i03" data-min="600" data-max="700" data-price="US$600 – 700">Novo</button>
+              <button type="button" class="variant-btn" data-target="i03" data-min="375" data-max="420" data-price="US$375 – 420 (usado, com garantia)">Usado</button>
+            </div>
+            <div class="item-footer">
+              <div class="item-price" data-price-for="i03">US$600 – 700</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1709231-REG/sony_e_11mm_f_1_8_lens.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bestbuy.com/site/sony-e-11mm-f1-8-aps-c-ultra-wide-angle-prime-lens-black/6509496.p?skuId=6509496" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3. ÁUDIO -->
+    <section class="category" id="audio" data-cat="audio">
+      <div class="cat-head">
+        <h2><span class="num">03</span> Áudio — duas frentes</h2>
+        <p>O Huambo tem som próprio: o apito do comboio do CFB, o mercado, os vendedores. Duas frentes de captação garantem que nada disso se perde atrás da imagem.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i04" class="toggle" data-min="199" data-max="300" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i04">
+              <h3>Hollyland Lark Max 2</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Combo 2TX + 1RX</span>
+            </label>
+            <p class="item-desc">Microfone de lapela sem fio para falas, com redundância mic→câmara e gravação interna a 32-bit.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Falas e entrevistas ficam só com o som da câmara, bem pior. Não há substituto no kit.</p>
+            <div class="item-footer">
+              <div class="item-price">US$199 – 300</div>
+              <div class="item-links">
+                <a href="https://www.sweetwater.com/store/detail/LarkMax2Cmb--hollyland-lark-max-2-combo-digital-wireless-microphone-system-2.4ghz" target="_blank" rel="noopener">Sweetwater<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bestbuy.com/product/hollyland-lark-max-2-combo-wireless-microphone-system-space-gray-black/JJ8Y39QSSZ" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado">
+          <div class="item-select">
+            <input type="checkbox" id="i05" class="toggle" data-min="40" data-max="72" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i05">
+              <h3>Adaptador Hollyland Hot Shoe</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Para Lark Max 2</span>
+            </label>
+            <p class="item-desc">Encaixe direto na sapata da a6700, sem cabos — compatibilidade já confirmada com o corpo escolhido.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Dá para ligar por cabo. Perde-se comodidade, não qualidade de som.</p>
+            <div class="item-footer">
+              <div class="item-price">US$40 – 72</div>
+              <div class="item-links">
+                <a href="https://www.adorama.com/hollyland-lark-max-2-receiver-hot-shoe-adapter/p/hlhotshoeada" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i06" class="toggle" data-min="249" data-max="280" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i06">
+              <h3>Rode VideoMic NTG</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Shotgun, som ambiente</span>
+            </label>
+            <p class="item-desc">Capta o que o Lark Max 2 não apanha bem — mercado, comboio do CFB, rua, natureza.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Perde-se a captação de ambiente (mercado, comboio do CFB, rua), que o Lark Max 2 não cobre bem.</p>
+            <div class="item-footer">
+              <div class="item-price">US$249 – 280</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1521595-REG/rode_vmntg_videomic_ntg_hybrid_analog_usb.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/RDVMNTG.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4. MONITORIZAÇÃO -->
+    <section class="category" id="monitorizacao" data-cat="monitorizacao">
+      <div class="cat-head">
+        <h2><span class="num">04</span> Monitorização</h2>
+        <p>Ver bem e ouvir bem no momento da captação evita descobrir o erro só na edição, quando já não há como refilmar.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="recomendado">
+          <div class="item-select">
+            <input type="checkbox" id="i28" class="toggle" data-min="140" data-max="189" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i28">
+              <h3>Feelworld F6 Plus V2</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Monitor externo 5,5", touchscreen, Full HD, HDMI</span>
+            </label>
+            <p class="item-desc">Entrada HDMI e cabo micro-HDMI incluído, o formato da saída da a6700. Alimentação por USB-C — dá para ligar ao power bank Anker 737 já no kit. Tem focus peaking, false color e zebras para focar e expor com precisão ao sol. A sapata da câmara já é usada pelo recetor do Lark Max 2, por isso montar o monitor pede uma gaiola ou braço com rosca 1/4"-20 (não incluído). A Glazer's estava esgotada quando consultei.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Focar e enquadrar passa a depender só do ecrã da câmara. Funciona, mas é mais lento e menos preciso, sobretudo ao sol.</p>
+            <div class="item-footer">
+              <div class="item-price">US$140 – 189</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1556369-REG/feelworld_f6plus_f6_plus_5_5_4k.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.glazerscamera.com/products/feelworld-f6-plus-5-5-4k-mon" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i29" class="toggle" data-min="85" data-max="115" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i29">
+              <h3>Sony MDR-7506</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Headphones de estúdio fechados, plug 3,5mm com adaptador 6,3mm</span>
+            </label>
+            <p class="item-desc">O padrão da indústria para monitorizar som. O desenho fechado isola o ruído do local, para ouvir o que os microfones estão realmente a captar. Liga à saída de auscultadores da a6700 (3,5mm). Dobra e traz bolsa de transporte.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Não há como ouvir o som real durante a gravação. Um problema de áudio só aparece na edição, sem repetição possível.</p>
+            <div class="item-footer">
+              <div class="item-price">US$85 – 115</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/49510-REG/Sony_MDR_7506_MDR_7506_Headphone.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.amazon.com/dp/B000AJIF4E" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 5. ILUMINAÇÃO -->
+    <section class="category" id="iluminacao" data-cat="iluminacao">
+      <div class="cat-head">
+        <h2><span class="num">05</span> Iluminação</h2>
+        <p>Luz contínua para os interiores controlados do hotel, e um reforço rápido de flash para os retratos ao ar livre, sem depender do sol.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i07" class="toggle" data-min="169" data-max="200" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i07">
+              <h3>Godox SL60IIBi</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">COB Bi-Color, 60W, montagem Bowens</span>
+            </label>
+            <p class="item-desc">Luz principal, usada nos dias de hotel e cidade.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Os dias de hotel ficam dependentes da luz que existir nos interiores.</p>
+            <div class="item-footer">
+              <div class="item-price">US$169 – 200</div>
+              <div class="item-links">
+                <a href="https://www.adorama.com/l/Photography/Godox~Lighting-and-Studio?startAt=50" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://robertscamera.com/godox-sl60ii-led-video-lt-bicolor-led-video-light" target="_blank" rel="noopener">Robert's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado">
+          <div class="item-select">
+            <input type="checkbox" id="i08" class="toggle" data-min="58" data-max="69" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i08">
+              <h3>Godox SB-GUE120</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Octabox 120cm com grid, montagem Bowens</span>
+            </label>
+            <p class="item-desc">Substitui o softbox quadrado de 90cm: luz mais envolvente e catchlights mais naturais, na mesma montagem Bowens do SL60IIBi.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> A SL60IIBi funciona sem ele, com luz mais dura. Custa pouco para o efeito que dá.</p>
+            <div class="item-footer">
+              <div class="item-price">US$58 – 69</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1651020-REG/godox_sb_gue120_size_octa_120cm.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/gosbnbmoc120.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="opcional">
+          <div class="item-select">
+            <input type="checkbox" id="i09" class="toggle" data-min="199" data-max="259" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i09">
+              <h3>Godox V1-S</h3>
+              <span class="badge badge-opcional">Opcional</span>
+              <span class="item-model">Flash TTL, cabeça redonda, para Sony</span>
+            </label>
+            <p class="item-desc">Luz mais dura/direta e HSS até 1/8000s — útil em exteriores com sol forte. Precisa do rádio flash abaixo para disparar sem fios.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Os dias de hotel ficam cobertos pela luz contínua. Perde-se o reforço em exteriores com sol forte.</p>
+            <div class="item-footer">
+              <div class="item-price">US$199 – 259</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1466057-REG/godox_v1_s_v1_flash_for_sony.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/i/flashpoint-zoom-li-on-r2-ttl-on-camera-round-flash-speedlight-sony" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="opcional">
+          <div class="item-select">
+            <input type="checkbox" id="i10" class="toggle" data-min="89" data-max="99" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i10">
+              <h3>Godox XPro II-S</h3>
+              <span class="badge badge-opcional">Opcional</span>
+              <span class="item-model">Rádio flash (transmissor TTL 2.4GHz), para Sony</span>
+            </label>
+            <p class="item-desc">Dispara o V1-S sem fios direto da sapata da a6700, com controlo de potência, TTL e HSS a partir do transmissor.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Só faz falta com o V1-S. Cortam-se os dois juntos.</p>
+            <div class="item-footer">
+              <div class="item-price">US$89 – 99</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1762519-REG/godox_xproiis_d_ttl_flash_trigger.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.glazerscamera.com/products/godox-xproiis-ttl-trigger-sony" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i11" class="toggle" data-min="20" data-max="55" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i11">
+              <h3>Neewer 43"/110cm Reflector 5-em-1</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Com clamp e stand</span>
+            </label>
+            <p class="item-desc">Ferramenta principal de luz nos dias de natureza — sem levar a luz grande ao terreno.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> É a principal ferramenta de luz nos dias de natureza, e custa pouco.</p>
+            <div class="item-footer">
+              <div class="item-price">US$20 – 55</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/dp/B002ZIMEMW" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://neewer.com/collections/light-modifiers/products/neewer-43-110cm-light-reflector-with-metal-clamp-and-stand-66600923" target="_blank" rel="noopener">Neewer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i12" class="toggle" data-min="35" data-max="90" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i12">
+              <h3>Neewer ST-260AC</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Light stand 2,6m (8,5ft), com air cushion</span>
+            </label>
+            <p class="item-desc">Suporte para a luz principal nos dias de hotel/cidade.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Sem suporte, a SL60IIBi tem de ser segurada à mão ou pousada.</p>
+            <div class="item-footer">
+              <div class="item-price">US$35 – 90</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1783497-REG/neewer_66602621_8_5_25_30_35mm_air_cushioned.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://neewer.com/collections/light-stands/products/neewer-st-260ac-8-5ft-2-6m-air-cushioned-light-stand-66602621" target="_blank" rel="noopener">Neewer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. ENERGIA -->
+    <section class="category" id="energia" data-cat="energia">
+      <div class="cat-head">
+        <h2><span class="num">06</span> Energia</h2>
+        <p>Sete dias sem garantia de tomada por perto. Energia própria para a câmara, o telemóvel, os microfones e o backup em disco.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i13" class="toggle" data-min="169" data-max="250" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i13">
+              <h3>EcoFlow RIVER 2</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">256Wh / 300W, bateria LiFePO4</span>
+            </label>
+            <p class="item-desc">Power station para carregar tudo à noite, mesmo sem eletricidade estável no alojamento.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Carregar tudo à noite passa a depender da eletricidade do alojamento.</p>
+            <div class="item-footer">
+              <div class="item-price">US$169 – 250</div>
+              <div class="item-links">
+                <a href="https://shop.rubicon.tech/products/ecoflow-river-2-portable-power-station" target="_blank" rel="noopener">Rubicon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://offroadtents.com/products/ecoflow-river-2-portable-power-station" target="_blank" rel="noopener">Offroad Tents<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado">
+          <div class="item-select">
+            <input type="checkbox" id="i14" class="toggle" data-min="90" data-max="150" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i14">
+              <h3>Anker 737 Power Bank</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">PowerCore 24K — 24.000mAh, 140W PD 3.1</span>
+            </label>
+            <p class="item-desc">Energia de mochila para câmara, telemóvel, microfones e SSD, longe da power station.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Perde-se carga de reserva de mochila para câmara, telemóvel e SSD durante o dia.</p>
+            <div class="item-footer">
+              <div class="item-price">US$90 – 150</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/dp/B09VPHVT2Z" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.anker.com/us/products/a1289" target="_blank" rel="noopener">Anker<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i15" class="toggle" data-min="156" data-max="180" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i15">
+              <h3>Sony NP-FZ100</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Baterias extra da câmara — 2 unidades adicionais</span>
+            </label>
+            <p class="item-desc">A a6700 vem com uma bateria; mais duas dão o mínimo de 3 no total para sete dias sem segunda oportunidade de carregar. US$78–90 cada.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Com uma só bateria, a filmagem pára a meio do dia.</p>
+            <div class="item-footer">
+              <div class="item-price">US$156 – 180</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/dp/B071CLKMRT" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/collections/sony/products/sony-np-fz100-rechargeable-lithium-ion-battery-2280mah" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. ARMAZENAMENTO -->
+    <section class="category" id="armazenamento" data-cat="armazenamento">
+      <div class="cat-head">
+        <h2><span class="num">07</span> Armazenamento</h2>
+        <p>Um cartão perdido não é um imprevisto — é um dia de produção que desaparece. Redundância dupla em campo, todos os dias.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i16" class="toggle" data-min="135" data-max="195" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i16">
+              <h3>SanDisk Extreme PRO SDXC UHS-II V60 128GB</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">SDSDXEP-128G-GN4IN — 3 unidades</span>
+            </label>
+            <p class="item-desc">A a6700 só tem um slot: 3 cartões evitam ficar bloqueado à espera de descarregar o principal. US$45–65 cada.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> A câmara tem um só slot: com menos cartões, é preciso parar para descarregar.</p>
+            <div class="item-footer">
+              <div class="item-price">US$135 – 195</div>
+              <div class="item-links">
+                <a href="https://www.bestbuy.com/product/sandisk-128gb-extreme-pro-sdxc-uhs-ii-v60-memory-card-r-w-up-to-280-100mb-s/JXJ62C6F2W" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/products/sandisk-extreme-pro-uhs-ii-sdxc-memory-card-128gb-1" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i17" class="toggle" data-min="180" data-max="330" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i17">
+              <h3>SanDisk Extreme Portable SSD V2 1TB</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">SDSSDE61-1T00-G25 — 2 unidades</span>
+            </label>
+            <p class="item-desc">Backup diário dos cartões, em dois discos (não um) guardados em sítios diferentes. IP55, 1.050 MB/s, USB-C. US$90–165 cada.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Sem backup diário, um cartão perdido é um dia de produção que não se recupera.</p>
+            <div class="item-footer">
+              <div class="item-price">US$180 – 330</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1595431-REG" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.amazon.com/s?k=SanDisk+Extreme+Portable+SSD+1TB+SDSSDE61-1T00-G25" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 8. SUPORTE -->
+    <section class="category" id="suporte" data-cat="suporte">
+      <div class="cat-head">
+        <h2><span class="num">08</span> Suporte</h2>
+        <p>Estabilidade para os planos gerais e para as entrevistas — sem tremulação, sem pressa a montar.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i18" class="toggle" data-min="128" data-max="160" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i18">
+              <h3>SmallRig AD-01</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Tripé de vídeo com cabeça fluida, modelo 3751 / 3751B</span>
+            </label>
+            <p class="item-desc">Carga até 8kg, altura 85–186cm.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Entrevistas e planos gerais ficam à mão livre.</p>
+            <div class="item-footer">
+              <div class="item-price">US$128 – 160</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1774976-REG/smallrig_3751b_ad_01_heavy_duty_tripod_with.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/specials/l/SmallRig~Photography" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 9. PROTEÇÃO CONTRA CHUVA -->
+    <section class="category" id="chuva" data-cat="chuva">
+      <div class="cat-head">
+        <h2><span class="num">09</span> Proteção contra chuva</h2>
+        <p>Dezembro é época chuvosa no Planalto Central. O equipamento — e quem o carrega — precisa de continuar a trabalhar debaixo de água.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i19" class="toggle" data-min="285" data-max="300" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i19">
+              <h3>Lowepro Flipside BP 400 AW III</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Mochila com capa de chuva integrada (AW Cover)</span>
+            </label>
+            <p class="item-desc">Transporte diário do kit, com proteção de base contra chuva e poeira.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Uma mochila simples com capa de chuva poupa cerca de US$60–150 sem tirar o transporte protegido.</p>
+            <div class="item-footer">
+              <div class="item-price">US$285 – 300</div>
+              <div class="item-links">
+                <a href="https://robertscamera.com/lwp-flipside-400-aw-iii" target="_blank" rel="noopener">Robert's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.glazerscamera.com/collections/all/products/flipside-400-aw-iii" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="essencial">
+          <div class="item-select">
+            <input type="checkbox" id="i20" class="toggle" data-min="40" data-max="60" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i20">
+              <h3>Movo CRC-03</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Capa de chuva extra-longa para câmara + lente + tripé — 2 unidades</span>
+            </label>
+            <p class="item-desc">Permite continuar a filmar em chuva leve/moderada, com acesso aos controlos. US$20–30 cada.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Com chuva média é preciso parar de filmar. Uma capa é o mínimo.</p>
+            <div class="item-footer">
+              <div class="item-price">US$40 – 60</div>
+              <div class="item-links">
+                <a href="https://www.adorama.com/l/Photography/Photography-Bags-and-Cases/Movo-Photo~Camera-Rain-Covers" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://movophoto.com/products/movo-crc-camera-rain-cover" target="_blank" rel="noopener">Movo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado">
+          <div class="item-select">
+            <input type="checkbox" id="i21" class="toggle" data-min="38" data-max="67" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i21">
+              <h3>Frogg Toggs Ultra-Lite2 + Sea to Summit Dry Bag</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Poncho impermeável para a equipa + dry bag para eletrónica pequena</span>
+            </label>
+            <p class="item-desc">Protege a equipa e itens sensíveis à água — cartões, baterias, microfones — quando a chuva é forte demais para continuar a gravar.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Cartões, baterias e microfones ficam sem proteção quando a chuva é forte.</p>
+            <div class="item-footer">
+              <div class="item-price">US$38 – 67</div>
+              <div class="item-links">
+                <a href="https://froggtoggs.com/womens/womens-rain-ponchos" target="_blank" rel="noopener">Frogg Toggs<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.dickssportinggoods.com/a/sea-to-summit-dry-bag-0anz01c.html" target="_blank" rel="noopener">Dick's Sporting Goods<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10. DRONE -->
+    <section class="category" id="drone" data-cat="drone">
+      <div class="cat-head">
+        <h2><span class="num">10</span> Drone</h2>
+        <p>Morro do Moco, barragens, a nascente do Cubango — paisagens que só fazem sentido vistas de cima. Escolher uma das três opções; todas ficam dentro do teto de US$600.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="radio" name="drone" id="i22" class="toggle" data-min="259" data-max="349">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i22">
+              <h3>DJI Neo</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Fly More Combo, com RC-N3 — opção 1</span>
+            </label>
+            <p class="item-desc">A mais barata e leve das três (135g). Decola sem controlo e segue o sujeito automaticamente, mas sem sensores de obstáculo frontais — boa para planos rápidos e casuais.</p>
+            <div class="item-footer">
+              <div class="item-price">US$259 – 349</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/s?k=DJI+Neo+Fly+More+Combo+RC-N3" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://store.dji.com/product/dji-neo" target="_blank" rel="noopener">DJI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="radio" name="drone" id="i23" class="toggle" data-min="339" data-max="449">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i23">
+              <h3>DJI Mini 4K</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Fly More Combo — opção 2</span>
+            </label>
+            <p class="item-desc">Equilíbrio entre preço e robustez: sub-249g, 4K/30fps com gimbal de 3 eixos, resistência a vento nível 5 — relevante nos dias de planalto/montanha. Sem sensores omnidirecionais.</p>
+            <div class="item-footer">
+              <div class="item-price">US$339 – 449</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/s?k=DJI+Mini+4K+Fly+More+Combo" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://store.dji.com/product/dji-mini-4k" target="_blank" rel="noopener">DJI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="radio" name="drone" id="i24" class="toggle" data-min="429" data-max="599" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i24">
+              <h3>DJI Neo 2</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Fly More Combo, com RC-N3 — opção 3</span>
+            </label>
+            <p class="item-desc">A mais completa dentro do teto: 4K/60fps, sensores omnidirecionais assistidos por LiDAR — a única das três com essa proteção — leve (~151g), 3 baterias no combo.</p>
+            <div class="item-footer">
+              <div class="item-price">US$429 – 599</div>
+              <div class="item-links">
+                <a href="https://www.amazon.com/s?k=DJI+Neo+2+Fly+More+Combo+RC-N3" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://store.dji.com/product/dji-neo-2" target="_blank" rel="noopener">DJI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="none">
+          <div class="item-select">
+            <input type="radio" name="drone" id="i27" class="toggle" data-min="0" data-max="0" data-skip="1">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i27">
+              <h3>Sem drone por agora</h3>
+              <span class="item-model">Decidir mais tarde</span>
+            </label>
+            <p class="item-desc">Tira o drone do orçamento. As imagens aéreas (Morro do Moco, barragens, nascente do Cubango) ficam de fora da captação.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> poupa entre US$259 e 599, conforme a opção que estava escolhida. É a maior redução possível num único item.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="drone-note">Confirmar se Angola exige registo/autorização de voo, mesmo para drones com menos de 250g.</p>
+    </section>
+
+    <!-- 11. HUMIDADE -->
+    <section class="category" id="humidade" data-cat="humidade">
+      <div class="cat-head">
+        <h2><span class="num">11</span> Proteção contra humidade</h2>
+        <p>O inimigo silencioso: fungo dentro da lente, que só aparece semanas depois, quando já não há como refilmar.</p>
+      </div>
+      <ul class="items">
+        <li class="item" data-priority="importante">
+          <div class="item-select">
+            <input type="checkbox" id="i25" class="toggle" data-min="18" data-max="22" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i25">
+              <h3>Ruggard Renewable Dehumidifier/Desiccant</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">USB-C, modelo RD-10</span>
+            </label>
+            <p class="item-desc">Unidade recarregável (~6h) que fica dentro da mochila a absorver humidade continuamente, sem consumíveis.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Risco real de fungo nas lentes ao fim de sete dias húmidos, e custa pouco.</p>
+            <div class="item-footer">
+              <div class="item-price">US$18 – 22</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/accessories/Dehumidifiers-for-the-Pelican-1569/389340-REG-72947" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.amazon.com/s?k=Ruggard+Renewable+Dehumidifier+Desiccant+USB-C+RD-10" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado">
+          <div class="item-select">
+            <input type="checkbox" id="i26" class="toggle" data-min="20" data-max="24" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i26">
+              <h3>Ruggard Desiccant Silica Gel Pack</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Lata metálica, 40g — 2 unidades</span>
+            </label>
+            <p class="item-desc">Complementa a unidade acima dentro dos estojos individuais de lente/câmara. Reutilizável no forno a ~150°C. US$10–12 cada.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> O desumidificador cobre a mochila; este protege os estojos individuais.</p>
+            <div class="item-footer">
+              <div class="item-price">US$20 – 24</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1022198-REG/ruggard_sg_dc1_reusable_silica_gel_desiccant.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1958284-REG/ruggard_reusable_silicon_dioxide_fabric.html" target="_blank" rel="noopener">B&amp;H (saquetas)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <p class="empty-state" id="emptyState" hidden>Nenhum item encontrado. Tente outro termo ou volte a escolher “Todas” nas prioridades.</p>
+
+    <footer class="site-footer">
+      <p><strong>Sobre os preços e links:</strong> valores observados no momento da pesquisa em lojas dos EUA — mudam com promoções e stock. Confirmar sempre modelo e preço atual antes de finalizar a compra. Se a compra for feita fora de Angola, orçar à parte frete, tempo de entrega e taxas alfandegárias.</p>
+      <p>Guia construído a partir do plano de produção do Hotel Miragem × Huambo, pensado para ser reutilizável noutros projectos de captação fora de estúdio.</p>
+    </footer>
+
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var RANK = { essencial:1, importante:2, recomendado:3, opcional:4 };
+  var PRESET_LABEL = { essencial:'Só o essencial', importante:'Essencial + importante', completo:'Kit completo' };
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('.toggle'));
+  var fxInput = document.getElementById('fxRate');
+  var budgetUSD = document.getElementById('budgetUSD');
+  var budgetKz = document.getElementById('budgetKz');
+  var budgetCount = document.getElementById('budgetCount');
+  var toast = document.getElementById('toast');
+  var state = { query:'', prio:'all' };
+  var toastTimer;
+
+  function fmt(n){
+    return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+  function normalize(str){
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+  function prioOf(el){
+    var li = el.closest('.item');
+    return li ? li.dataset.priority : null;
+  }
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('is-visible'); }, 2200);
+  }
+
+  function recalc(){
+    var min = 0, max = 0, count = 0, total = 0;
+    var seenGroups = {};
+    var tiers = {
+      essencial:{min:0,max:0,n:0}, importante:{min:0,max:0,n:0},
+      recomendado:{min:0,max:0,n:0}, opcional:{min:0,max:0,n:0}
+    };
+    var cats = {};
+    document.querySelectorAll('.category').forEach(function(sec){
+      cats[sec.dataset.cat] = { checked:0, total:0 };
+    });
+
+    toggles.forEach(function(el){
+      var sec = el.closest('.category');
+      var c = sec ? cats[sec.dataset.cat] : null;
+      if(el.type === 'radio'){
+        if(!seenGroups[el.name]){ seenGroups[el.name] = true; total++; if(c) c.total++; }
+      } else {
+        total++; if(c) c.total++;
+      }
+      if(el.checked && !el.dataset.skip){
+        var mn = parseFloat(el.dataset.min) || 0;
+        var mx = parseFloat(el.dataset.max) || 0;
+        min += mn; max += mx; count++;
+        if(c) c.checked++;
+        var p = prioOf(el);
+        if(p && tiers[p]){ tiers[p].min += mn; tiers[p].max += mx; tiers[p].n++; }
+      }
+    });
+
+    budgetUSD.textContent = 'US$' + fmt(min) + ' – ' + fmt(max);
+    var fx = parseFloat(fxInput.value) || 0;
+    budgetKz.textContent = '≈ Kz ' + fmt(min * fx) + ' – ' + fmt(max * fx);
+    budgetCount.textContent = count + ' de ' + total + ' itens selecionados';
+
+    Object.keys(tiers).forEach(function(k){
+      var t = tiers[k];
+      var el = document.querySelector('[data-tier-total="' + k + '"]');
+      if(el) el.textContent = t.n ? 'US$' + fmt(t.min) + ' – ' + fmt(t.max) : '—';
+    });
+
+    document.querySelectorAll('[data-nav-count]').forEach(function(span){
+      var c = cats[span.dataset.navCount];
+      if(!c) return;
+      span.textContent = c.checked + '/' + c.total;
+      span.closest('a').classList.toggle('is-empty', c.checked === 0);
+    });
+  }
+
+  toggles.forEach(function(el){ el.addEventListener('change', recalc); });
+  fxInput.addEventListener('input', recalc);
+
+  // lens variant switch (novo / usado)
+  document.querySelectorAll('.item-variant').forEach(function(group){
+    var buttons = group.querySelectorAll('.variant-btn');
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        buttons.forEach(function(b){ b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var target = document.getElementById(btn.dataset.target);
+        if(target){
+          target.dataset.min = btn.dataset.min;
+          target.dataset.max = btn.dataset.max;
+          var priceEl = document.querySelector('[data-price-for="' + btn.dataset.target + '"]');
+          if(priceEl) priceEl.textContent = btn.dataset.price;
+        }
+        recalc();
+      });
+    });
+  });
+
+  // quick scenarios
+  function applyPreset(level){
+    var limit = level === 'essencial' ? 1 : (level === 'importante' ? 2 : 4);
+    toggles.forEach(function(el){
+      if(el.type !== 'checkbox') return;
+      var p = prioOf(el);
+      el.checked = !!p && RANK[p] <= limit;
+    });
+    var droneId = level === 'essencial' ? 'i27' : (level === 'importante' ? 'i23' : 'i24');
+    var drone = document.getElementById(droneId);
+    if(drone) drone.checked = true;
+    recalc();
+    showToast('Cenário aplicado: ' + PRESET_LABEL[level]);
+  }
+  document.querySelectorAll('[data-preset]').forEach(function(btn){
+    btn.addEventListener('click', function(){ applyPreset(btn.dataset.preset); });
+  });
+
+  // search + priority filter
+  function applyFilters(){
+    var q = normalize(state.query.trim());
+    var anySection = false;
+    document.querySelectorAll('.category').forEach(function(sec){
+      var any = false;
+      sec.querySelectorAll('.item').forEach(function(item){
+        var textMatch = q === '' || normalize(item.textContent).indexOf(q) !== -1;
+        var prioMatch = state.prio === 'all' || item.dataset.priority === state.prio;
+        var show = textMatch && prioMatch;
+        item.classList.toggle('is-hidden', !show);
+        if(show) any = true;
+      });
+      sec.classList.toggle('is-hidden', !any);
+      if(any) anySection = true;
+      var navLink = document.querySelector('.cat-nav a[data-cat-id="' + sec.dataset.cat + '"]');
+      if(navLink) navLink.style.display = any ? '' : 'none';
+    });
+    document.getElementById('emptyState').hidden = anySection;
+  }
+
+  document.getElementById('searchInput').addEventListener('input', function(e){
+    state.query = e.target.value;
+    applyFilters();
+  });
+  document.querySelectorAll('#prioFilter .chip').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      state.prio = chip.dataset.prio;
+      document.querySelectorAll('#prioFilter .chip').forEach(function(c){
+        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+      });
+      applyFilters();
+    });
+  });
+
+  // copy summary
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var fx = parseFloat(fxInput.value) || 0;
+    var lines = ['Kit Miragem × Huambo — orçamento de equipamento', ''];
+    var minTotal = 0, maxTotal = 0;
+    var tiers = { essencial:[0,0], importante:[0,0], recomendado:[0,0], opcional:[0,0] };
+    var labels = { essencial:'Essencial', importante:'Importante', recomendado:'Recomendado', opcional:'Opcional' };
+
+    document.querySelectorAll('.category').forEach(function(sec){
+      var heading = sec.querySelector('.cat-head h2');
+      var out = [];
+      sec.querySelectorAll('.toggle:checked').forEach(function(el){
+        if(el.dataset.skip) return;
+        var item = el.closest('.item');
+        var name = item.querySelector('h3').textContent.trim();
+        var priceEl = item.querySelector('[data-price-for]') || item.querySelector('.item-price');
+        var price = priceEl ? priceEl.textContent.trim() : '';
+        var p = item.dataset.priority;
+        var mn = parseFloat(el.dataset.min) || 0, mx = parseFloat(el.dataset.max) || 0;
+        out.push('  - ' + name + (p && labels[p] ? ' [' + labels[p] + ']' : '') + ' — ' + price);
+        minTotal += mn; maxTotal += mx;
+        if(p && tiers[p]){ tiers[p][0] += mn; tiers[p][1] += mx; }
+      });
+      if(out.length){
+        lines.push(heading.textContent.trim());
+        lines = lines.concat(out);
+        lines.push('');
+      }
+    });
+
+    lines.push('TOTAL: US$' + fmt(minTotal) + ' – ' + fmt(maxTotal) + '  (≈ Kz ' + fmt(minTotal*fx) + ' – ' + fmt(maxTotal*fx) + ', câmbio 1 USD = ' + fmt(fx) + ' Kz)');
+    lines.push('');
+    lines.push('Por prioridade:');
+    Object.keys(tiers).forEach(function(k){
+      if(tiers[k][1] > 0) lines.push('  - ' + labels[k] + ': US$' + fmt(tiers[k][0]) + ' – ' + fmt(tiers[k][1]));
+    });
+    var text = lines.join('\n');
+
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        showToast('Resumo copiado para a área de transferência');
+      }).catch(function(){
+        showToast('Não foi possível copiar automaticamente');
+      });
+    } else {
+      showToast('Não foi possível copiar automaticamente');
+    }
+  });
+
+  // active category highlight
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.cat-nav a'));
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var link = document.querySelector('.cat-nav a[data-cat-id="' + entry.target.id + '"]');
+      if(!link) return;
+      if(entry.isIntersecting){
+        navLinks.forEach(function(l){ l.classList.remove('is-active'); });
+        link.classList.add('is-active');
+      }
+    });
+  }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+  document.querySelectorAll('.category').forEach(function(sec){ observer.observe(sec); });
+
+  // mobile drawer
+  var sidebar = document.getElementById('sidebar');
+  var scrim = document.getElementById('scrim');
+  var openBtn = document.getElementById('openSidebar');
+  var closeBtn = document.getElementById('closeSidebar');
+  function openSidebar(){
+    sidebar.classList.add('is-open');
+    scrim.classList.add('is-open');
+    closeBtn.style.display = 'inline-flex';
+    openBtn.setAttribute('aria-expanded', 'true');
+  }
+  function closeSidebar(){
+    sidebar.classList.remove('is-open');
+    scrim.classList.remove('is-open');
+    openBtn.setAttribute('aria-expanded', 'false');
+  }
+  openBtn.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  scrim.addEventListener('click', closeSidebar);
+  navLinks.forEach(function(l){ l.addEventListener('click', function(){ if(window.innerWidth <= 900) closeSidebar(); }); });
+
+  recalc();
+})();
+</script>
+</body>
+</html>
