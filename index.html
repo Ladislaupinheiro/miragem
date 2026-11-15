@@ -306,6 +306,26 @@
   }
   .empty-state[hidden]{ display:none; }
 
+  /* ---------- sistema (Sony / Canon) ---------- */
+  body[data-system="canon"] [data-sys="sony"],
+  body[data-system="sony"] [data-sys="canon"]{ display:none !important; }
+  .system-bar{
+    position:sticky; top:var(--mobile-bar-h, 0px); z-index:110;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    padding:12px 48px; background:var(--paper); border-bottom:1px solid var(--line);
+  }
+  .system-label{ font-size:.82rem; font-weight:600; color:var(--ink-soft); }
+  .seg{ display:inline-flex; border:1px solid var(--ink); border-radius:var(--radius-md); overflow:hidden; background:var(--white); }
+  .seg button{
+    font-family:var(--font-body); font-size:.92rem; font-weight:500; cursor:pointer;
+    padding:9px 20px; border:0; background:transparent; color:var(--ink);
+  }
+  .seg button + button{ border-left:1px solid var(--ink); }
+  .seg button[aria-checked="true"]{ background:var(--ink); color:var(--white); }
+  .seg button:not([aria-checked="true"]):hover{ background:rgba(168,69,42,.08); }
+  #budgetSys{ color:var(--brick-deep); }
+  .category{ scroll-margin-top:90px; }
+
   /* ---------- responsive ---------- */
   @media (max-width: 900px){
     .layout{ grid-template-columns:1fr; }
@@ -330,6 +350,7 @@
     }
     .sidebar-scrim.is-open{ opacity:1; pointer-events:auto; }
     .hero{ padding:36px 22px 28px; }
+    .system-bar{ padding:10px 22px; }
     .priority-guide{ padding:4px 22px 28px; }
     .prio-list{ grid-template-columns:1fr; }
     .empty-state{ padding:28px 22px; }
@@ -407,7 +428,7 @@
       </nav>
 
       <div class="budget-panel">
-        <h2>Orçamento em tempo real</h2>
+        <h2>Orçamento em tempo real <span id="budgetSys"></span></h2>
         <p class="budget-range" id="budgetUSD">US$0 – 0</p>
         <p class="budget-kz" id="budgetKz">≈ Kz 0 – 0</p>
 
@@ -446,9 +467,17 @@
 
   <main id="conteudo">
 
+    <div class="system-bar" id="systemBar">
+      <span class="system-label" id="sysLbl">Kit para o corpo</span>
+      <div class="seg" role="radiogroup" aria-labelledby="sysLbl">
+        <button type="button" role="radio" aria-checked="true" data-system="sony">Sony a6700</button>
+        <button type="button" role="radio" aria-checked="false" data-system="canon">Canon 90D</button>
+      </div>
+    </div>
+
     <header class="hero">
       <h1>Equipamento para contar o Huambo sem atalhos.</h1>
-      <p class="lead">Guia de compra para a produção documental do Hotel Miragem e do Planalto Central: sete dias de captação entre o hotel, a cidade, a natureza e o património, em plena época chuvosa. Cada item tem o modelo exato, o preço observado e dois links para comparar e comprar — sem precisar de mais pesquisa.</p>
+      <p class="lead">Guia de compra, com kit para a Sony a6700 e para a Canon EOS 90D, para a produção documental do Hotel Miragem e do Planalto Central: sete dias de captação entre o hotel, a cidade, a natureza e o património, em plena época chuvosa. Cada item tem o modelo exato, o preço observado e dois links para comparar e comprar — sem precisar de mais pesquisa.</p>
       <dl class="hero-stats">
         <div><dt>7</dt><dd>dias de produção no terreno</dd></div>
         <div><dt>11</dt><dd>frentes de equipamento cobertas</dd></div>
@@ -475,7 +504,7 @@
         <p>Um único corpo para os sete dias — sem trocar de sistema a meio da estrada nem duplicar carregadores e baterias.</p>
       </div>
       <ul class="items">
-        <li class="item" data-priority="essencial">
+        <li class="item" data-priority="essencial" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i01" class="toggle" data-min="1398" data-max="1498" checked>
           </div>
@@ -496,6 +525,28 @@
             </div>
           </div>
         </li>
+        <li class="item" data-priority="essencial" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i30" class="toggle" data-min="495" data-max="860" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i30">
+              <h3>Canon EOS 90D</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Corpo (body only), DSLR APS-C 32,5MP, montagem EF</span>
+            </label>
+            <p class="item-desc">32,5MP APS-C, DIGIC 8, slot SD único compatível com UHS-II (reutiliza os cartões SanDisk já previstos), bateria LP-E6N (~1.300 disparos), entrada de microfone 3,5mm e saída de auscultadores. Modelo descontinuado: nas lojas consultadas só há usado ou recondicionado (MPB desde ~US$494, Canon recondicionado US$699, B&amp;H usado ~US$820–860). Comprar com garantia da loja e verificar o contador de disparos.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Sem corpo não há produção; é a base de todo o resto. Para poupar, escolher um exemplar usado mais barato (MPB).</p>
+            <div class="item-footer">
+              <div class="item-price">US$495 – 860 (usado/recondicionado)</div>
+              <div class="item-links">
+                <a href="https://www.bhphotovideo.com/c/product/1522798-REG/canon_eos_90d_dslr_camera.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.mpb.com/en-us/product/canon-eos-90d" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.keh.com/shop/canon-eos-90d-digital-slr-camera-body-32-5-m-p.html" target="_blank" rel="noopener">KEH<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </section>
 
@@ -503,10 +554,11 @@
     <section class="category" id="lentes" data-cat="lentes">
       <div class="cat-head">
         <h2><span class="num">02</span> Lentes</h2>
-        <p>Duas lentes cobrem quase tudo: uma versátil para o dia a dia, outra grande angular para quando a paisagem — Morro do Moco, planaltos, rios — exige mais grandeza.</p>
+        <p data-sys="sony">Duas lentes cobrem quase tudo: uma versátil para o dia a dia, outra grande angular para quando a paisagem — Morro do Moco, planaltos, rios — exige mais grandeza.</p>
+        <p data-sys="canon">A equipa já tem a 50mm f/1.8 e a 75-300mm. Faltam um zoom principal e uma grande angular para paisagem e interiores, as duas lentes novas abaixo, com alternativas das marcas Canon, Sigma e Tokina. Escolher uma opção em cada grupo.</p>
       </div>
       <ul class="items">
-        <li class="item" data-priority="essencial">
+        <li class="item" data-priority="essencial" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i02" class="toggle" data-min="599" data-max="650" checked>
           </div>
@@ -527,7 +579,7 @@
             </div>
           </div>
         </li>
-        <li class="item" data-priority="importante">
+        <li class="item" data-priority="importante" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i03" class="toggle" data-min="600" data-max="700" checked>
           </div>
@@ -552,6 +604,148 @@
             </div>
           </div>
         </li>
+        <li class="item" data-priority="none" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i31" class="toggle" data-min="0" data-max="0" data-skip="1" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i31">
+              <h3>Canon EF 50mm f/1.8 STM</h3>
+              <span class="item-model">Lente já existente, rosca de filtro 49mm — já na equipa, custo zero</span>
+            </label>
+            <p class="item-desc">Na 90D (fator 1,6x) equivale a cerca de 80mm: retratos, detalhes e gastronomia, e muito luminosa para os interiores do hotel.</p>
+          </div>
+        </li>
+        <li class="item" data-priority="none" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i32" class="toggle" data-min="0" data-max="0" data-skip="1" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i32">
+              <h3>Canon EF 75-300mm f/4-5.6 III</h3>
+              <span class="item-model">Lente já existente, rosca de filtro 58mm — já na equipa, custo zero</span>
+            </label>
+            <p class="item-desc">Na 90D equivale a cerca de 120–480mm: paisagem comprimida, Morro do Moco e vida de rua à distância. Sem estabilização óptica, por isso pede tripé ou velocidade alta.</p>
+          </div>
+        </li>
+        <li class="item" data-priority="essencial" data-sys="canon">
+          <div class="item-select">
+            <input type="radio" name="canon-zoom" id="i39" class="toggle" data-min="300" data-max="575" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i39">
+              <h3>Canon EF-S 17-55mm f/2.8 IS USM</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Zoom padrão f/2.8 com estabilização, para APS-C</span>
+            </label>
+            <p class="item-desc">Equivalente Canon do Tamron 17–70mm: zoom f/2.8 constante com estabilização óptica, cerca de 27–88mm em full-frame na 90D. Fica na câmara na maior parte do tempo, do plano geral ao retrato. Descontinuada: só se encontra usada ou recondicionada (Canon Store US$299, esgotada na consulta; KEH desde ~US$312; B&amp;H usado ~US$550–575).</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Perde-se o zoom principal; sobram a 50mm f/1.8 (≈80mm) e a 75-300mm, que não cobrem os planos largos.</p>
+            <div class="item-footer">
+              <div class="item-price">US$300 – 575 (usado/recondicionado)</div>
+              <div class="item-links">
+                <a href="https://www.mpb.com/en-us/product/canon-ef-s-17-55mm-f-2-8-is-usm/sku-3896096" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://artscameras.com/products/canon-ef-s-17-55mm-f-2-8-is-usm-lens" target="_blank" rel="noopener">Arts Cameras<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="essencial" data-sys="canon">
+          <div class="item-select">
+            <input type="radio" name="canon-zoom" id="i42" class="toggle" data-min="125" data-max="485">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i42">
+              <h3>Sigma 17-50mm f/2.8 EX DC OS HSM</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Alternativa ao Canon 17-55mm; zoom f/2.8 com estabilização OS, para APS-C</span>
+            </label>
+            <p class="item-desc">Mesma função do Canon 17-55mm: zoom f/2.8 constante com estabilização e motor HSM, rosca de filtro de 77mm. Descontinuada, só usada. A faixa de preço é larga porque o estado dos exemplares varia muito (MPB: 21 unidades, US$124–484); comparar o estado antes de comprar.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Perde-se o zoom principal. Escolher esta ou o Canon 17-55mm, não as duas.</p>
+            <div class="item-footer">
+              <div class="item-price">US$125 – 485 (usada)</div>
+              <div class="item-links">
+                <a href="https://www.mpb.com/en-us/product/sigma-17-50mm-f-2-8-ex-dc-os-hsm-canon-ef-s-fit" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.keh.com/shop/sigma-583101-17-mm-50-mm-f-2-8-lens.html" target="_blank" rel="noopener">KEH<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante" data-sys="canon">
+          <div class="item-select">
+            <input type="radio" name="canon-wide" id="i40" class="toggle" data-min="399" data-max="399" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i40">
+              <h3>Tokina atx-i 11-20mm f/2.8 CF</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Grande angular APS-C, montagem Canon EF</span>
+            </label>
+            <p class="item-desc">Equivalente Canon do Sony 11mm: cerca de 18–32mm em full-frame na 90D, abertura f/2.8 constante, para paisagem, Morro do Moco e interiores do hotel. Novo no B&amp;H por US$399; a Tokina vende diretamente nos EUA.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos 17mm do zoom principal. Existe unidade usada na Adorama (preço variável).</p>
+            <div class="item-footer">
+              <div class="item-price">US$399</div>
+              <div class="item-links">
+                <a href="https://tokinausa.com/products/atx-i-11-20mm-cf-f-2-8-canon-ef-mount" target="_blank" rel="noopener">Tokina USA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/used-tokina-atx-i-11-20mm-cf-f-28-lens-for-canon-ef/p/us2035449" target="_blank" rel="noopener">Adorama (usado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante" data-sys="canon">
+          <div class="item-select">
+            <input type="radio" name="canon-wide" id="i43" class="toggle" data-min="81" data-max="159">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i43">
+              <h3>Sigma 10-20mm f/3.5 EX DC HSM</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Grande angular APS-C f/3.5 constante, a opção mais barata</span>
+            </label>
+            <p class="item-desc">Cerca de 16–32mm em full-frame na 90D, f/3.5 constante e motor HSM. Descontinuada: só usada, mas barata (MPB: 12 unidades, US$81–159).</p>
+            <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos planos do zoom principal. Esta opção é a que menos pesa no orçamento.</p>
+            <div class="item-footer">
+              <div class="item-price">US$81 – 159 (usada)</div>
+              <div class="item-links">
+                <a href="https://www.mpb.com/en-us/product/sigma-10-20mm-f-3-5-ex-dc-hsm-canon-ef-s-fit" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/used-sigma-10-20mm-f-35-ex-dc-hsm-autofocus-zoom-lens-for-canon-eos-dslr-cameras/p/us2072112" target="_blank" rel="noopener">Adorama (usada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="importante" data-sys="canon">
+          <div class="item-select">
+            <input type="radio" name="canon-wide" id="i44" class="toggle" data-min="329" data-max="329">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i44">
+              <h3>Tokina AT-X 11-16mm f/2.8 PRO DX II</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Grande angular APS-C f/2.8 constante, alcance mais curto</span>
+            </label>
+            <p class="item-desc">Cerca de 18–26mm em full-frame na 90D, f/2.8 constante. Alcance mais curto que o Tokina 11-20mm. US$328,99 no BuyDirectNY (confirmar disponibilidade com a loja); o B&amp;H tem uma listagem usada, sem preço verificado.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos planos do zoom principal.</p>
+            <div class="item-footer">
+              <div class="item-price">US$329</div>
+              <div class="item-links">
+                <a href="https://buydirectny.com/products/tokina-at-x-116-pro-dx-ii-11-16mm-f-2-8-lens-for-canon-ef-1" target="_blank" rel="noopener">BuyDirectNY<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/803463143-USE/tokina_atxaf116dxiic_at_x_116_pro_dx_ii.html" target="_blank" rel="noopener">B&amp;H (usada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="none" data-sys="canon">
+          <div class="item-select">
+            <input type="radio" name="canon-wide" id="i45" class="toggle" data-min="0" data-max="0" data-skip="1">
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i45">
+              <h3>Sem grande angular por agora</h3>
+              <span class="item-model">Decidir mais tarde</span>
+            </label>
+            <p class="item-desc">Tira a grande angular do orçamento; os planos largos ficam limitados ao zoom principal.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Poupa entre US$81 e 399, conforme a opção escolhida.</p>
+          </div>
+        </li>
       </ul>
     </section>
 
@@ -573,6 +767,7 @@
               <span class="item-model">Combo 2TX + 1RX</span>
             </label>
             <p class="item-desc">Microfone de lapela sem fio para falas, com redundância mic→câmara e gravação interna a 32-bit.</p>
+            <p class="item-desc" data-sys="canon">Na Canon 90D não precisa do adaptador de sapata: o combo traz um cabo 3,5mm TRS para ligar o recetor à entrada de microfone da câmara (confirmar na caixa).</p>
             <p class="item-cut"><strong>Se cortar:</strong> Falas e entrevistas ficam só com o som da câmara, bem pior. Não há substituto no kit.</p>
             <div class="item-footer">
               <div class="item-price">US$199 – 300</div>
@@ -583,7 +778,7 @@
             </div>
           </div>
         </li>
-        <li class="item" data-priority="recomendado">
+        <li class="item" data-priority="recomendado" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i05" class="toggle" data-min="40" data-max="72" checked>
           </div>
@@ -644,7 +839,7 @@
               <span class="badge badge-recomendado">Recomendado</span>
               <span class="item-model">Monitor externo 5,5", touchscreen, Full HD, HDMI</span>
             </label>
-            <p class="item-desc">Entrada HDMI e cabo micro-HDMI incluído, o formato da saída da a6700. Alimentação por USB-C — dá para ligar ao power bank Anker 737 já no kit. Tem focus peaking, false color e zebras para focar e expor com precisão ao sol. A sapata da câmara já é usada pelo recetor do Lark Max 2, por isso montar o monitor pede uma gaiola ou braço com rosca 1/4"-20 (não incluído). A Glazer's estava esgotada quando consultei.</p>
+            <p class="item-desc"><span data-sys="sony">Entrada HDMI e cabo micro-HDMI incluído, o formato da saída da a6700.</span><span data-sys="canon">Entrada HDMI; a 90D tem saída mini-HDMI e o cabo incluído é micro-HDMI, por isso é preciso o cabo mini-HDMI listado abaixo.</span> Alimentação por USB-C — dá para ligar ao power bank Anker 737 já no kit. Tem focus peaking, false color e zebras para focar e expor com precisão ao sol. A sapata da câmara já é usada pelo recetor do Lark Max 2, por isso montar o monitor pede uma gaiola ou braço com rosca 1/4"-20 (não incluído). A Glazer's estava esgotada quando consultei.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Focar e enquadrar passa a depender só do ecrã da câmara. Funciona, mas é mais lento e menos preciso, sobretudo ao sol.</p>
             <div class="item-footer">
               <div class="item-price">US$140 – 189</div>
@@ -665,13 +860,34 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Headphones de estúdio fechados, plug 3,5mm com adaptador 6,3mm</span>
             </label>
-            <p class="item-desc">O padrão da indústria para monitorizar som. O desenho fechado isola o ruído do local, para ouvir o que os microfones estão realmente a captar. Liga à saída de auscultadores da a6700 (3,5mm). Dobra e traz bolsa de transporte.</p>
+            <p class="item-desc">O padrão da indústria para monitorizar som. O desenho fechado isola o ruído do local, para ouvir o que os microfones estão realmente a captar. Liga à saída de auscultadores da câmara (3,5mm). Dobra e traz bolsa de transporte.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Não há como ouvir o som real durante a gravação. Um problema de áudio só aparece na edição, sem repetição possível.</p>
             <div class="item-footer">
               <div class="item-price">US$85 – 115</div>
               <div class="item-links">
                 <a href="https://www.bhphotovideo.com/c/product/49510-REG/Sony_MDR_7506_MDR_7506_Headphone.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.amazon.com/dp/B000AJIF4E" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i41" class="toggle" data-min="14" data-max="15" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i41">
+              <h3>Cabo mini-HDMI para HDMI (Cable Leader, 3 ft)</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Para ligar a 90D (saída mini-HDMI) ao monitor externo</span>
+            </label>
+            <p class="item-desc">O cabo que vem no monitor Feelworld é micro-HDMI e não encaixa na 90D, que tem saída mini-HDMI. Alternativa da Canon: HTC-100 (B&amp;H, sem preço na página).</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Sem este cabo o monitor externo não funciona com a 90D; cortar junto com o monitor.</p>
+            <div class="item-footer">
+              <div class="item-price">≈ US$14,49 (Best Buy, 3 ft)</div>
+              <div class="item-links">
+                <a href="https://www.bestbuy.com/product/cable-leader-high-speed-hdmi-to-mini-hdmi-cable-with-ethernet-4k30hz-hdmi-1-4-for-dslr-camera-camcorder-tablet-black/J39TZ8RRGC" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/516706-REG/Canon_2384B001_HTC_100_HDMI_Male_to.html" target="_blank" rel="noopener">B&amp;H (Canon HTC-100)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -728,7 +944,7 @@
             </div>
           </div>
         </li>
-        <li class="item" data-priority="opcional">
+        <li class="item" data-priority="opcional" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i09" class="toggle" data-min="199" data-max="259" checked>
           </div>
@@ -749,7 +965,7 @@
             </div>
           </div>
         </li>
-        <li class="item" data-priority="opcional">
+        <li class="item" data-priority="opcional" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i10" class="toggle" data-min="89" data-max="99" checked>
           </div>
@@ -812,6 +1028,48 @@
             </div>
           </div>
         </li>
+        <li class="item" data-priority="importante" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i34" class="toggle" data-min="229" data-max="259" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i34">
+              <h3>Godox V1-C</h3>
+              <span class="badge badge-importante">Importante</span>
+              <span class="item-model">Flash TTL de cabeça redonda para Canon</span>
+            </label>
+            <p class="item-desc">Equivalente Canon do V1-S. Pode ser usado direto na sapata da 90D, sem transmissor, como reforço em retratos exteriores.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Os dias de hotel ficam cobertos pela luz contínua. Perde-se o reforço em exteriores com sol forte.</p>
+            <div class="item-footer">
+              <div class="item-price">US$229 – 259</div>
+              <div class="item-links">
+                <a href="https://www.sweetwater.com/store/detail/V1C--godox-v1c-camera-flash" target="_blank" rel="noopener">Sweetwater<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/products/godox-v1-c-flash-for-canon-us" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="opcional" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i35" class="toggle" data-min="79" data-max="89" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i35">
+              <h3>Godox XPro II-C</h3>
+              <span class="badge badge-opcional">Opcional</span>
+              <span class="item-model">Transmissor TTL 2.4GHz para Canon</span>
+            </label>
+            <p class="item-desc">Equivalente Canon do XPro II-S. Só é preciso para disparar o V1-C fora da câmara, sem fios.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Só faz falta para flash fora da câmara. Cortar se o V1-C ficar sempre na sapata.</p>
+            <div class="item-footer">
+              <div class="item-price">US$79 – 89</div>
+              <div class="item-links">
+                <a href="https://www.glazerscamera.com/products/godox-xproiic-ttl-trigger-can" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://store.bandccamera.com/products/godox-xpro-ii-ttl-wireless-flash-trigger-for-canon-cameras" target="_blank" rel="noopener">B&amp;C Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </section>
 
@@ -864,7 +1122,7 @@
             </div>
           </div>
         </li>
-        <li class="item" data-priority="essencial">
+        <li class="item" data-priority="essencial" data-sys="sony">
           <div class="item-select">
             <input type="checkbox" id="i15" class="toggle" data-min="156" data-max="180" checked>
           </div>
@@ -881,6 +1139,48 @@
               <div class="item-links">
                 <a href="https://www.amazon.com/dp/B071CLKMRT" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://procam.com/collections/sony/products/sony-np-fz100-rechargeable-lithium-ion-battery-2280mah" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="essencial" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i33" class="toggle" data-min="37" data-max="46" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i33">
+              <h3>K&amp;F Concept LP-E6NH 2600mAh, USB-C — pack de 2</h3>
+              <span class="badge badge-essencial">Essencial</span>
+              <span class="item-model">Compatível LP-E6N/LP-E6NH, com porta USB-C na própria bateria</span>
+            </label>
+            <p class="item-desc">A 90D não carrega a bateria dentro da câmara (só tem porta Micro-USB de dados, ao contrário da Sony a6700). Estas baterias têm USB-C integrado e carregam no Anker 737 ou na EcoFlow RIVER 2 já previstos, sem o carregador de parede da Canon. Com a bateria da câmara, o pack de 2 dá 3 no total (mínimo definido para o projeto).</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Fica-se só com a bateria da câmara (~1.300 disparos). Em dias de campo sem tomada, a filmagem pára a meio do dia.</p>
+            <div class="item-footer">
+              <div class="item-price">US$37 – 46 (pack de 2; US$43,49 na K&amp;F)</div>
+              <div class="item-links">
+                <a href="https://kfconcept.com/KF28.0033S1-lp-e6nh--2-batteries--battery-with-2600mah-capacity-and-type-c-fast-charging" target="_blank" rel="noopener">K&amp;F Concept<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://kentfaith.com/KF28.0033S1_2-pack-lp-e6nh-battery-with-2600mah-capacity-and-type-c-fast-charging-for-canon" target="_blank" rel="noopener">Kent Faith<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="opcional" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i37" class="toggle" data-min="55" data-max="55" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i37">
+              <h3>Green Extreme BG-E14</h3>
+              <span class="badge badge-opcional">Opcional</span>
+              <span class="item-model">Punho de bateria vertical para Canon 80D/90D</span>
+            </label>
+            <p class="item-desc">Leva duas baterias LP-E6N e dá pega vertical para retratos. Soma peso e volume à mochila.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Com 3 baterias USB-C no total, a autonomia já está coberta.</p>
+            <div class="item-footer">
+              <div class="item-price">US$55</div>
+              <div class="item-links">
+                <a href="https://www.adorama.com/gxbge14.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.camerawholesalers.com/products/8585969631430-bg-e14-battery-grip-for-canon-cameras-eos-90d-80d-and-70d" target="_blank" rel="noopener">Camera Wholesalers<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -905,7 +1205,7 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">SDSDXEP-128G-GN4IN — 3 unidades</span>
             </label>
-            <p class="item-desc">A a6700 só tem um slot: 3 cartões evitam ficar bloqueado à espera de descarregar o principal. US$45–65 cada.</p>
+            <p class="item-desc"><span data-sys="sony">A a6700 só tem um slot</span><span data-sys="canon">A 90D também só tem um slot e aceita cartões UHS-II</span>: 3 cartões evitam ficar bloqueado à espera de descarregar o principal. US$45–65 cada.</p>
             <p class="item-cut"><strong>Se cortar:</strong> A câmara tem um só slot: com menos cartões, é preciso parar para descarregar.</p>
             <div class="item-footer">
               <div class="item-price">US$135 – 195</div>
@@ -964,6 +1264,27 @@
               <div class="item-links">
                 <a href="https://www.bhphotovideo.com/c/product/1774976-REG/smallrig_3751b_ad_01_heavy_duty_tripod_with.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.adorama.com/specials/l/SmallRig~Photography" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i36" class="toggle" data-min="30" data-max="30" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i36">
+              <h3>Canon RS-60E3</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Disparador por cabo para a porta E3 de 2,5mm da 90D</span>
+            </label>
+            <p class="item-desc">Dispara sem tocar na câmara: útil em exposições longas, nascer/pôr do sol no tripé e paisagem.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Dá para usar o temporizador de 2s da câmara. Perde-se comodidade, não qualidade.</p>
+            <div class="item-footer">
+              <div class="item-price">US$30</div>
+              <div class="item-links">
+                <a href="https://www.glazerscamera.com/products/remote-release-switch-rs-60e3" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/803430883-USE/canon_2469a002_rs_60e3_remote_switch.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1037,6 +1358,27 @@
               <div class="item-links">
                 <a href="https://froggtoggs.com/womens/womens-rain-ponchos" target="_blank" rel="noopener">Frogg Toggs<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.dickssportinggoods.com/a/sea-to-summit-dry-bag-0anz01c.html" target="_blank" rel="noopener">Dick's Sporting Goods<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item" data-priority="recomendado" data-sys="canon">
+          <div class="item-select">
+            <input type="checkbox" id="i38" class="toggle" data-min="58" data-max="72" checked>
+          </div>
+          <div class="item-body">
+            <label class="item-toggle" for="i38">
+              <h3>K&amp;F Concept filtros UV 49mm + 58mm</h3>
+              <span class="badge badge-recomendado">Recomendado</span>
+              <span class="item-model">Um filtro por lente existente (50mm STM = 49mm, 75-300mm = 58mm)</span>
+            </label>
+            <p class="item-desc">Proteção barata para a lente frontal contra chuva, poeira e riscos. Preços de promoção na loja K&amp;F: US$28,95 (49mm) e US$28,99 (58mm). O 17-55mm e o Tokina 11-20mm têm outras roscas: confirmar antes de comprar filtros para eles.</p>
+            <p class="item-cut"><strong>Se cortar:</strong> Sem filtro, a lente frontal fica exposta; tampão e pano cobrem o mínimo.</p>
+            <div class="item-footer">
+              <div class="item-price">US$58 – 72 (par)</div>
+              <div class="item-links">
+                <a href="https://www.kfconcept.com/KF01.983_mcuv-49mm-protection-filters-nano-xcel" target="_blank" rel="noopener">K&amp;F 49mm<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.kfconcept.com/kfconcept/KF01.967_mcuv-58mm-protection-filters-nano-xcel" target="_blank" rel="noopener">K&amp;F 58mm<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1205,6 +1547,9 @@
   var budgetCount = document.getElementById('budgetCount');
   var toast = document.getElementById('toast');
   var state = { query:'', prio:'all' };
+  var system = 'sony';
+  var SYS_LABEL = { sony:'Sony a6700', canon:'Canon 90D' };
+  function inSys(el){ var li = el.closest('.item'); var t = li && li.dataset.sys; return !t || t === system; }
   var toastTimer;
 
   function fmt(n){
@@ -1237,6 +1582,7 @@
     });
 
     toggles.forEach(function(el){
+      if(!inSys(el)) return;
       var sec = el.closest('.category');
       var c = sec ? cats[sec.dataset.cat] : null;
       if(el.type === 'radio'){
@@ -1299,10 +1645,11 @@
   function applyPreset(level){
     var limit = level === 'essencial' ? 1 : (level === 'importante' ? 2 : 4);
     toggles.forEach(function(el){
-      if(el.type !== 'checkbox') return;
+      if(el.type !== 'checkbox' || el.dataset.skip) return;
       var p = prioOf(el);
       el.checked = !!p && RANK[p] <= limit;
     });
+    var wide = document.getElementById(level === 'essencial' ? 'i45' : 'i40'); if(wide) wide.checked = true;
     var droneId = level === 'essencial' ? 'i27' : (level === 'importante' ? 'i23' : 'i24');
     var drone = document.getElementById(droneId);
     if(drone) drone.checked = true;
@@ -1322,7 +1669,8 @@
       sec.querySelectorAll('.item').forEach(function(item){
         var textMatch = q === '' || normalize(item.textContent).indexOf(q) !== -1;
         var prioMatch = state.prio === 'all' || item.dataset.priority === state.prio;
-        var show = textMatch && prioMatch;
+        var sysMatch = !item.dataset.sys || item.dataset.sys === system;
+        var show = textMatch && prioMatch && sysMatch;
         item.classList.toggle('is-hidden', !show);
         if(show) any = true;
       });
@@ -1351,7 +1699,7 @@
   // copy summary
   document.getElementById('copyBtn').addEventListener('click', function(){
     var fx = parseFloat(fxInput.value) || 0;
-    var lines = ['Kit Miragem × Huambo — orçamento de equipamento', ''];
+    var lines = ['Kit Miragem × Huambo — orçamento de equipamento (' + SYS_LABEL[system] + ')', ''];
     var minTotal = 0, maxTotal = 0;
     var tiers = { essencial:[0,0], importante:[0,0], recomendado:[0,0], opcional:[0,0] };
     var labels = { essencial:'Essencial', importante:'Importante', recomendado:'Recomendado', opcional:'Opcional' };
@@ -1360,7 +1708,7 @@
       var heading = sec.querySelector('.cat-head h2');
       var out = [];
       sec.querySelectorAll('.toggle:checked').forEach(function(el){
-        if(el.dataset.skip) return;
+        if(el.dataset.skip || !inSys(el)) return;
         var item = el.closest('.item');
         var name = item.querySelector('h3').textContent.trim();
         var priceEl = item.querySelector('[data-price-for]') || item.querySelector('.item-price');
@@ -1432,7 +1780,32 @@
   scrim.addEventListener('click', closeSidebar);
   navLinks.forEach(function(l){ l.addEventListener('click', function(){ if(window.innerWidth <= 900) closeSidebar(); }); });
 
-  recalc();
+  // sistema: Sony / Canon
+  function setSystem(sys){
+    system = sys;
+    document.body.dataset.system = sys;
+    document.querySelectorAll('.seg button').forEach(function(b){
+      b.setAttribute('aria-checked', b.dataset.system === sys ? 'true' : 'false');
+    });
+    document.getElementById('budgetSys').textContent = '— ' + SYS_LABEL[sys];
+    try{ localStorage.setItem('miragemSystem', sys); }catch(e){}
+    applyFilters();
+    recalc();
+  }
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click', function(){ setSystem(b.dataset.system); });
+  });
+  function setBarOffset(){
+    var mb = document.querySelector('.mobile-bar');
+    var h = (mb && getComputedStyle(mb).display !== 'none') ? mb.offsetHeight : 0;
+    document.documentElement.style.setProperty('--mobile-bar-h', h + 'px');
+  }
+  setBarOffset();
+  window.addEventListener('resize', setBarOffset);
+
+  var saved = 'sony';
+  try{ saved = localStorage.getItem('miragemSystem') || 'sony'; }catch(e){}
+  setSystem(SYS_LABEL[saved] ? saved : 'sony');
 })();
 </script>
 </body>
