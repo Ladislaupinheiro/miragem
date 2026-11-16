@@ -325,6 +325,10 @@
   .seg button:not([aria-checked="true"]):hover{ background:rgba(168,69,42,.08); }
   #budgetSys{ color:var(--brick-deep); }
   .category{ scroll-margin-top:90px; }
+  .item-body{ min-width:0; }
+  .item-links a{ white-space:normal; max-width:100%; }
+  .item-price{ min-width:0; white-space:normal; overflow-wrap:anywhere; max-width:100%; }
+  .item-footer, .item-links{ min-width:0; max-width:100%; }
 
   /* ---------- responsive ---------- */
   @media (max-width: 900px){
@@ -469,6 +473,7 @@
 
     <div class="system-bar" id="systemBar">
       <span class="system-label" id="sysLbl">Kit para o corpo</span>
+      <span class="system-label" data-sys="canon">Preços revistos em 15/11/2026 (nem todos confirmados nas lojas)</span><span class="system-label" data-sys="sony">Preços de setembro de 2026, não revistos</span>
       <div class="seg" role="radiogroup" aria-labelledby="sysLbl">
         <button type="button" role="radio" aria-checked="true" data-system="sony">Sony a6700</button>
         <button type="button" role="radio" aria-checked="false" data-system="canon">Canon 90D</button>
@@ -527,7 +532,7 @@
         </li>
         <li class="item" data-priority="essencial" data-sys="canon">
           <div class="item-select">
-            <input type="checkbox" id="i30" class="toggle" data-min="495" data-max="860" checked>
+            <input type="checkbox" id="i30" class="toggle" data-min="680" data-max="960" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i30">
@@ -535,14 +540,14 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">Corpo (body only), DSLR APS-C 32,5MP, montagem EF</span>
             </label>
-            <p class="item-desc">32,5MP APS-C, DIGIC 8, slot SD único compatível com UHS-II (reutiliza os cartões SanDisk já previstos), bateria LP-E6N (~1.300 disparos), entrada de microfone 3,5mm e saída de auscultadores. Modelo descontinuado: nas lojas consultadas só há usado ou recondicionado (MPB desde ~US$494, Canon recondicionado US$699, B&amp;H usado ~US$820–860). Comprar com garantia da loja e verificar o contador de disparos.</p>
+            <p class="item-desc">32,5MP APS-C, DIGIC 8, slot SD único compatível com UHS-II (reutiliza os cartões SanDisk já previstos), bateria LP-E6N (~1.300 disparos), entrada de microfone 3,5mm e saída de auscultadores. Modelo descontinuado: nas lojas consultadas só há usado ou recondicionado (MPB: US$494 muito usado, US$684 usado, US$784 bom, US$829 excelente; KEH: US$803–960; Adorama: desde US$849). Comprar com garantia da loja e verificar o contador de disparos.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Sem corpo não há produção; é a base de todo o resto. Para poupar, escolher um exemplar usado mais barato (MPB).</p>
             <div class="item-footer">
-              <div class="item-price">US$495 – 860 (usado/recondicionado)</div>
+              <div class="item-price">US$680 – 960 (usado; desde US$494 em estado muito usado)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/1522798-REG/canon_eos_90d_dslr_camera.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.mpb.com/en-us/product/canon-eos-90d" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.keh.com/shop/canon-eos-90d-digital-slr-camera-body-32-5-m-p.html" target="_blank" rel="noopener">KEH<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/ica90d.html" target="_blank" rel="noopener">Adorama (usado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -630,7 +635,7 @@
         </li>
         <li class="item" data-priority="essencial" data-sys="canon">
           <div class="item-select">
-            <input type="radio" name="canon-zoom" id="i39" class="toggle" data-min="300" data-max="575" checked>
+            <input type="radio" name="canon-zoom" id="i39" class="toggle" data-min="300" data-max="590" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i39">
@@ -638,20 +643,21 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">Zoom padrão f/2.8 com estabilização, para APS-C</span>
             </label>
-            <p class="item-desc">Equivalente Canon do Tamron 17–70mm: zoom f/2.8 constante com estabilização óptica, cerca de 27–88mm em full-frame na 90D. Fica na câmara na maior parte do tempo, do plano geral ao retrato. Descontinuada: só se encontra usada ou recondicionada (Canon Store US$299, esgotada na consulta; KEH desde ~US$312; B&amp;H usado ~US$550–575).</p>
+            <p class="item-desc">Equivalente Canon do Tamron 17–70mm: zoom f/2.8 constante com estabilização óptica, cerca de 27–88mm em full-frame na 90D. Fica na câmara na maior parte do tempo, do plano geral ao retrato. Descontinuada: só se encontra usada ou recondicionada (MPB US$149–589 conforme o estado; KEH US$411–608; Adorama US$299–565).</p>
             <p class="item-cut"><strong>Se cortar:</strong> Perde-se o zoom principal; sobram a 50mm f/1.8 (≈80mm) e a 75-300mm, que não cobrem os planos largos.</p>
             <div class="item-footer">
-              <div class="item-price">US$300 – 575 (usado/recondicionado)</div>
+              <div class="item-price">US$300 – 590 (usada)</div>
               <div class="item-links">
                 <a href="https://www.mpb.com/en-us/product/canon-ef-s-17-55mm-f-2-8-is-usm/sku-3896096" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://artscameras.com/products/canon-ef-s-17-55mm-f-2-8-is-usm-lens" target="_blank" rel="noopener">Arts Cameras<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.keh.com/shop/canon-ef-s-17-55-f-2-8-is-usm-standard-zoom-lens.html" target="_blank" rel="noopener">KEH<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/used-canon-ef-s-17-55mm-f-28-is-usm-ultra-wide-angle-zoom-lens/p/us2079274" target="_blank" rel="noopener">Adorama (usada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="essencial" data-sys="canon">
           <div class="item-select">
-            <input type="radio" name="canon-zoom" id="i42" class="toggle" data-min="125" data-max="485">
+            <input type="radio" name="canon-zoom" id="i42" class="toggle" data-min="217" data-max="530">
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i42">
@@ -659,10 +665,10 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">Alternativa ao Canon 17-55mm; zoom f/2.8 com estabilização OS, para APS-C</span>
             </label>
-            <p class="item-desc">Mesma função do Canon 17-55mm: zoom f/2.8 constante com estabilização e motor HSM, rosca de filtro de 77mm. Descontinuada, só usada. A faixa de preço é larga porque o estado dos exemplares varia muito (MPB: 21 unidades, US$124–484); comparar o estado antes de comprar.</p>
+            <p class="item-desc">Mesma função do Canon 17-55mm: zoom f/2.8 constante com estabilização e motor HSM, rosca de filtro de 77mm. Descontinuada, só usada. A faixa de preço é larga porque o estado dos exemplares varia muito (KEH US$217–528; MPB US$124–484, com os exemplares em estado excelente a US$454–484); comparar o estado antes de comprar.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Perde-se o zoom principal. Escolher esta ou o Canon 17-55mm, não as duas.</p>
             <div class="item-footer">
-              <div class="item-price">US$125 – 485 (usada)</div>
+              <div class="item-price">US$217 – 530 (usada)</div>
               <div class="item-links">
                 <a href="https://www.mpb.com/en-us/product/sigma-17-50mm-f-2-8-ex-dc-os-hsm-canon-ef-s-fit" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.keh.com/shop/sigma-583101-17-mm-50-mm-f-2-8-lens.html" target="_blank" rel="noopener">KEH<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -672,7 +678,7 @@
         </li>
         <li class="item" data-priority="importante" data-sys="canon">
           <div class="item-select">
-            <input type="radio" name="canon-wide" id="i40" class="toggle" data-min="399" data-max="399" checked>
+            <input type="radio" name="canon-wide" id="i40" class="toggle" data-min="299" data-max="399" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i40">
@@ -680,20 +686,20 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Grande angular APS-C, montagem Canon EF</span>
             </label>
-            <p class="item-desc">Equivalente Canon do Sony 11mm: cerca de 18–32mm em full-frame na 90D, abertura f/2.8 constante, para paisagem, Morro do Moco e interiores do hotel. Novo no B&amp;H por US$399; a Tokina vende diretamente nos EUA.</p>
+            <p class="item-desc">Equivalente Canon do Sony 11mm: cerca de 18–32mm em full-frame na 90D, abertura f/2.8 constante, para paisagem, Morro do Moco e interiores do hotel. Novo: US$399 segundo um agregador de preços, sem confirmação na loja; a Tokina USA lista US$579 e está esgotada. Usado: US$299–345 na Adorama.</p>
             <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos 17mm do zoom principal. Existe unidade usada na Adorama (preço variável).</p>
             <div class="item-footer">
-              <div class="item-price">US$399</div>
+              <div class="item-price">US$299 – 399 (novo US$399 segundo agregador; usado US$299–345)</div>
               <div class="item-links">
-                <a href="https://tokinausa.com/products/atx-i-11-20mm-cf-f-2-8-canon-ef-mount" target="_blank" rel="noopener">Tokina USA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.adorama.com/used-tokina-atx-i-11-20mm-cf-f-28-lens-for-canon-ef/p/us2035449" target="_blank" rel="noopener">Adorama (usado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/used-tokina-atx-i-11-20mm-cf-f-28-lens-for-canon-ef/p/us2035449" target="_blank" rel="noopener">Adorama (usada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://tokinausa.com/products/atx-i-11-20mm-cf-f-2-8-canon-ef-mount" target="_blank" rel="noopener">Tokina USA (esgotada, US$579)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="importante" data-sys="canon">
           <div class="item-select">
-            <input type="radio" name="canon-wide" id="i43" class="toggle" data-min="81" data-max="159">
+            <input type="radio" name="canon-wide" id="i43" class="toggle" data-min="81" data-max="176">
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i43">
@@ -701,10 +707,10 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Grande angular APS-C f/3.5 constante, a opção mais barata</span>
             </label>
-            <p class="item-desc">Cerca de 16–32mm em full-frame na 90D, f/3.5 constante e motor HSM. Descontinuada: só usada, mas barata (MPB: 12 unidades, US$81–159).</p>
+            <p class="item-desc">Cerca de 16–32mm em full-frame na 90D, f/3.5 constante e motor HSM. Descontinuada: só usada, mas barata (MPB: 12 unidades, US$81–159; Adorama US$176).</p>
             <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos planos do zoom principal. Esta opção é a que menos pesa no orçamento.</p>
             <div class="item-footer">
-              <div class="item-price">US$81 – 159 (usada)</div>
+              <div class="item-price">US$81 – 176 (usada)</div>
               <div class="item-links">
                 <a href="https://www.mpb.com/en-us/product/sigma-10-20mm-f-3-5-ex-dc-hsm-canon-ef-s-fit" target="_blank" rel="noopener">MPB<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.adorama.com/used-sigma-10-20mm-f-35-ex-dc-hsm-autofocus-zoom-lens-for-canon-eos-dslr-cameras/p/us2072112" target="_blank" rel="noopener">Adorama (usada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -722,7 +728,7 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Grande angular APS-C f/2.8 constante, alcance mais curto</span>
             </label>
-            <p class="item-desc">Cerca de 18–26mm em full-frame na 90D, f/2.8 constante. Alcance mais curto que o Tokina 11-20mm. US$328,99 no BuyDirectNY (confirmar disponibilidade com a loja); o B&amp;H tem uma listagem usada, sem preço verificado.</p>
+            <p class="item-desc">Cerca de 18–26mm em full-frame na 90D, f/2.8 constante. Alcance mais curto que o Tokina 11-20mm. US$328,99 no BuyDirectNY (loja de terceiros, sem indicação de stock: confirmar antes de pagar); o B&amp;H tem uma listagem usada, sem preço verificado.</p>
             <p class="item-cut"><strong>Se cortar:</strong> As paisagens de montanha ficam limitadas aos planos do zoom principal.</p>
             <div class="item-footer">
               <div class="item-price">US$329</div>
@@ -758,7 +764,7 @@
       <ul class="items">
         <li class="item" data-priority="essencial">
           <div class="item-select">
-            <input type="checkbox" id="i04" class="toggle" data-min="199" data-max="300" checked>
+            <input type="checkbox" id="i04" class="toggle" data-min="242" data-max="269" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i04">
@@ -767,13 +773,13 @@
               <span class="item-model">Combo 2TX + 1RX</span>
             </label>
             <p class="item-desc">Microfone de lapela sem fio para falas, com redundância mic→câmara e gravação interna a 32-bit.</p>
-            <p class="item-desc" data-sys="canon">Na Canon 90D não precisa do adaptador de sapata: o combo traz um cabo 3,5mm TRS para ligar o recetor à entrada de microfone da câmara (confirmar na caixa).</p>
+            <p class="item-desc" data-sys="canon">Na Canon 90D não precisa do adaptador de sapata: o combo inclui um cabo 3,5mm TRS para ligar o recetor à entrada de microfone da câmara (confirmado nas páginas da ProCam e da Markertek).</p>
             <p class="item-cut"><strong>Se cortar:</strong> Falas e entrevistas ficam só com o som da câmara, bem pior. Não há substituto no kit.</p>
             <div class="item-footer">
-              <div class="item-price">US$199 – 300</div>
+              <div class="item-price">US$242 – 269 (ProCam US$242 em promoção; normal US$269)</div>
               <div class="item-links">
-                <a href="https://www.sweetwater.com/store/detail/LarkMax2Cmb--hollyland-lark-max-2-combo-digital-wireless-microphone-system-2.4ghz" target="_blank" rel="noopener">Sweetwater<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.bestbuy.com/product/hollyland-lark-max-2-combo-wireless-microphone-system-space-gray-black/JJ8Y39QSSZ" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/products/hollyland-lark-max-2-combo-2-people-wireless-microphone-system-for-cameras-and-mobile-devices-space-gray-2-4-ghz" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.markertek.com/product/hl-larkmax2combo/hollyland-lark-max-2-combo-wireless-lavalier-system-with-camera-reciever-usb-c-receiver-2x-transmitters-space-gray" target="_blank" rel="noopener">Markertek (pré-venda até fev. 2027)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -800,7 +806,7 @@
         </li>
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i06" class="toggle" data-min="249" data-max="280" checked>
+            <input type="checkbox" id="i06" class="toggle" data-min="223" data-max="259" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i06">
@@ -808,10 +814,10 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Shotgun, som ambiente</span>
             </label>
-            <p class="item-desc">Capta o que o Lark Max 2 não apanha bem — mercado, comboio do CFB, rua, natureza.</p>
+            <p class="item-desc">Capta o que o Lark Max 2 não apanha bem — mercado, comboio do CFB, rua, natureza. Os links B&amp;H e Adorama não foram confirmados nesta revisão.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Perde-se a captação de ambiente (mercado, comboio do CFB, rua), que o Lark Max 2 não cobre bem.</p>
             <div class="item-footer">
-              <div class="item-price">US$249 – 280</div>
+              <div class="item-price">US$223 – 259 (ProCam US$223, normal US$259, esgotado na consulta)</div>
               <div class="item-links">
                 <a href="https://www.bhphotovideo.com/c/product/1521595-REG/rode_vmntg_videomic_ntg_hybrid_analog_usb.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.adorama.com/RDVMNTG.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -839,20 +845,20 @@
               <span class="badge badge-recomendado">Recomendado</span>
               <span class="item-model">Monitor externo 5,5", touchscreen, Full HD, HDMI</span>
             </label>
-            <p class="item-desc"><span data-sys="sony">Entrada HDMI e cabo micro-HDMI incluído, o formato da saída da a6700.</span><span data-sys="canon">Entrada HDMI; a 90D tem saída mini-HDMI e o cabo incluído é micro-HDMI, por isso é preciso o cabo mini-HDMI listado abaixo.</span> Alimentação por USB-C — dá para ligar ao power bank Anker 737 já no kit. Tem focus peaking, false color e zebras para focar e expor com precisão ao sol. A sapata da câmara já é usada pelo recetor do Lark Max 2, por isso montar o monitor pede uma gaiola ou braço com rosca 1/4"-20 (não incluído). A Glazer's estava esgotada quando consultei.</p>
+            <p class="item-desc"><span data-sys="sony">Entrada HDMI e cabo micro-HDMI incluído, o formato da saída da a6700.</span><span data-sys="canon">Entrada HDMI; a 90D tem saída mini-HDMI e o cabo incluído é micro-HDMI, por isso é preciso o cabo mini-HDMI listado abaixo.</span> Alimentação por USB-C — dá para ligar ao power bank Anker 737 já no kit. Tem focus peaking, false color e zebras para focar e expor com precisão ao sol. A sapata da câmara já é usada pelo recetor do Lark Max 2, por isso montar o monitor pede uma gaiola ou braço com rosca 1/4"-20 (não incluído). O único preço lido foi US$189 para o F6 Plus original (Glazer's, esgotado); o preço da V2 no B&amp;H não aparece na página.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Focar e enquadrar passa a depender só do ecrã da câmara. Funciona, mas é mais lento e menos preciso, sobretudo ao sol.</p>
             <div class="item-footer">
-              <div class="item-price">US$140 – 189</div>
+              <div class="item-price">US$140 – 189 (preço da V2 não confirmado)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/1556369-REG/feelworld_f6plus_f6_plus_5_5_4k.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.glazerscamera.com/products/feelworld-f6-plus-5-5-4k-mon" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1556369-REG/feelworld_f6plus_f6_plus_5_5_4k.html" target="_blank" rel="noopener">B&amp;H (V2, em stock)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.glazerscamera.com/products/feelworld-f6-plus-5-5-4k-mon" target="_blank" rel="noopener">Glazer's (F6 Plus original, esgotado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i29" class="toggle" data-min="85" data-max="115" checked>
+            <input type="checkbox" id="i29" class="toggle" data-min="113" data-max="113" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i29">
@@ -863,17 +869,17 @@
             <p class="item-desc">O padrão da indústria para monitorizar som. O desenho fechado isola o ruído do local, para ouvir o que os microfones estão realmente a captar. Liga à saída de auscultadores da câmara (3,5mm). Dobra e traz bolsa de transporte.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Não há como ouvir o som real durante a gravação. Um problema de áudio só aparece na edição, sem repetição possível.</p>
             <div class="item-footer">
-              <div class="item-price">US$85 – 115</div>
+              <div class="item-price">US$113</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/49510-REG/Sony_MDR_7506_MDR_7506_Headphone.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.amazon.com/dp/B000AJIF4E" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/somdr7506.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/49510-REG/Sony_MDR_7506_MDR_7506_Headphone.html" target="_blank" rel="noopener">B&amp;H (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="recomendado" data-sys="canon">
           <div class="item-select">
-            <input type="checkbox" id="i41" class="toggle" data-min="14" data-max="15" checked>
+            <input type="checkbox" id="i41" class="toggle" data-min="14" data-max="14" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i41">
@@ -884,7 +890,7 @@
             <p class="item-desc">O cabo que vem no monitor Feelworld é micro-HDMI e não encaixa na 90D, que tem saída mini-HDMI. Alternativa da Canon: HTC-100 (B&amp;H, sem preço na página).</p>
             <p class="item-cut"><strong>Se cortar:</strong> Sem este cabo o monitor externo não funciona com a 90D; cortar junto com o monitor.</p>
             <div class="item-footer">
-              <div class="item-price">≈ US$14,49 (Best Buy, 3 ft)</div>
+              <div class="item-price">US$14,49 (Best Buy, 3 ft)</div>
               <div class="item-links">
                 <a href="https://www.bestbuy.com/product/cable-leader-high-speed-hdmi-to-mini-hdmi-cable-with-ethernet-4k30hz-hdmi-1-4-for-dslr-camera-camcorder-tablet-black/J39TZ8RRGC" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://www.bhphotovideo.com/c/product/516706-REG/Canon_2384B001_HTC_100_HDMI_Male_to.html" target="_blank" rel="noopener">B&amp;H (Canon HTC-100)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -904,7 +910,7 @@
       <ul class="items">
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i07" class="toggle" data-min="169" data-max="200" checked>
+            <input type="checkbox" id="i07" class="toggle" data-min="139" data-max="169" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i07">
@@ -915,17 +921,17 @@
             <p class="item-desc">Luz principal, usada nos dias de hotel e cidade.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Os dias de hotel ficam dependentes da luz que existir nos interiores.</p>
             <div class="item-footer">
-              <div class="item-price">US$169 – 200</div>
+              <div class="item-price">US$139 – 169 (Adorama US$139, sob encomenda até jan. 2027)</div>
               <div class="item-links">
-                <a href="https://www.adorama.com/l/Photography/Godox~Lighting-and-Studio?startAt=50" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://robertscamera.com/godox-sl60ii-led-video-lt-bicolor-led-video-light" target="_blank" rel="noopener">Robert's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/gosl60iibi.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://robertscamera.com/godox-sl60ii-led-video-lt-bicolor-led-video-light" target="_blank" rel="noopener">Robert's Camera (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="recomendado">
           <div class="item-select">
-            <input type="checkbox" id="i08" class="toggle" data-min="58" data-max="69" checked>
+            <input type="checkbox" id="i08" class="toggle" data-min="50" data-max="50" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i08">
@@ -936,10 +942,10 @@
             <p class="item-desc">Substitui o softbox quadrado de 90cm: luz mais envolvente e catchlights mais naturais, na mesma montagem Bowens do SL60IIBi.</p>
             <p class="item-cut"><strong>Se cortar:</strong> A SL60IIBi funciona sem ele, com luz mais dura. Custa pouco para o efeito que dá.</p>
             <div class="item-footer">
-              <div class="item-price">US$58 – 69</div>
+              <div class="item-price">US$49,99 (ProCam)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/1651020-REG/godox_sb_gue120_size_octa_120cm.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.adorama.com/gosbnbmoc120.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/products/godox-octa-softbox-with-bowens-speed-ring-and-grid-47" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1651020-REG/godox_sb_gue120_size_octa_120cm.html" target="_blank" rel="noopener">B&amp;H (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -988,7 +994,7 @@
         </li>
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i11" class="toggle" data-min="20" data-max="55" checked>
+            <input type="checkbox" id="i11" class="toggle" data-min="55" data-max="55" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i11">
@@ -999,17 +1005,17 @@
             <p class="item-desc">Ferramenta principal de luz nos dias de natureza — sem levar a luz grande ao terreno.</p>
             <p class="item-cut"><strong>Se cortar:</strong> É a principal ferramenta de luz nos dias de natureza, e custa pouco.</p>
             <div class="item-footer">
-              <div class="item-price">US$20 – 55</div>
+              <div class="item-price">US$54,99 (kit com suporte e clamp)</div>
               <div class="item-links">
-                <a href="https://www.amazon.com/dp/B002ZIMEMW" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://neewer.com/collections/light-modifiers/products/neewer-43-110cm-light-reflector-with-metal-clamp-and-stand-66600923" target="_blank" rel="noopener">Neewer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://neewer.com/products/neewer-43-110cm-light-reflector-with-metal-clamp-and-stand-66600923" target="_blank" rel="noopener">Neewer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.amazon.com/dp/B002ZIMEMW" target="_blank" rel="noopener">Amazon (versão simples, preço não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i12" class="toggle" data-min="35" data-max="90" checked>
+            <input type="checkbox" id="i12" class="toggle" data-min="43" data-max="70" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i12">
@@ -1020,7 +1026,7 @@
             <p class="item-desc">Suporte para a luz principal nos dias de hotel/cidade.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Sem suporte, a SL60IIBi tem de ser segurada à mão ou pousada.</p>
             <div class="item-footer">
-              <div class="item-price">US$35 – 90</div>
+              <div class="item-price">US$43 – 70 (B&amp;H sob encomenda, 6–10 semanas)</div>
               <div class="item-links">
                 <a href="https://www.bhphotovideo.com/c/product/1783497-REG/neewer_66602621_8_5_25_30_35mm_air_cushioned.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://neewer.com/collections/light-stands/products/neewer-st-260ac-8-5ft-2-6m-air-cushioned-light-stand-66602621" target="_blank" rel="noopener">Neewer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -1030,7 +1036,7 @@
         </li>
         <li class="item" data-priority="importante" data-sys="canon">
           <div class="item-select">
-            <input type="checkbox" id="i34" class="toggle" data-min="229" data-max="259" checked>
+            <input type="checkbox" id="i34" class="toggle" data-min="199" data-max="259" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i34">
@@ -1041,7 +1047,7 @@
             <p class="item-desc">Equivalente Canon do V1-S. Pode ser usado direto na sapata da 90D, sem transmissor, como reforço em retratos exteriores.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Os dias de hotel ficam cobertos pela luz contínua. Perde-se o reforço em exteriores com sol forte.</p>
             <div class="item-footer">
-              <div class="item-price">US$229 – 259</div>
+              <div class="item-price">US$199 – 259 (Sweetwater US$199, sob encomenda até 23/11; ProCam US$259)</div>
               <div class="item-links">
                 <a href="https://www.sweetwater.com/store/detail/V1C--godox-v1c-camera-flash" target="_blank" rel="noopener">Sweetwater<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://procam.com/products/godox-v1-c-flash-for-canon-us" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -1082,7 +1088,7 @@
       <ul class="items">
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i13" class="toggle" data-min="169" data-max="250" checked>
+            <input type="checkbox" id="i13" class="toggle" data-min="219" data-max="239" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i13">
@@ -1093,7 +1099,7 @@
             <p class="item-desc">Power station para carregar tudo à noite, mesmo sem eletricidade estável no alojamento.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Carregar tudo à noite passa a depender da eletricidade do alojamento.</p>
             <div class="item-footer">
-              <div class="item-price">US$169 – 250</div>
+              <div class="item-price">US$219 – 239</div>
               <div class="item-links">
                 <a href="https://shop.rubicon.tech/products/ecoflow-river-2-portable-power-station" target="_blank" rel="noopener">Rubicon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://offroadtents.com/products/ecoflow-river-2-portable-power-station" target="_blank" rel="noopener">Offroad Tents<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -1111,13 +1117,13 @@
               <span class="badge badge-recomendado">Recomendado</span>
               <span class="item-model">PowerCore 24K — 24.000mAh, 140W PD 3.1</span>
             </label>
-            <p class="item-desc">Energia de mochila para câmara, telemóvel, microfones e SSD, longe da power station.</p>
+            <p class="item-desc">Energia de mochila para câmara, telemóvel, microfones e SSD, longe da power station. Atenção: a Anker US e a Abt indicam esgotado ou indisponível, por isso pode estar descontinuado. O preço vem de uma pesquisa anterior e não foi confirmado.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Perde-se carga de reserva de mochila para câmara, telemóvel e SSD durante o dia.</p>
             <div class="item-footer">
-              <div class="item-price">US$90 – 150</div>
+              <div class="item-price">Esgotada na Anker US; preço não confirmado (≈ US$90 – 150)</div>
               <div class="item-links">
-                <a href="https://www.amazon.com/dp/B09VPHVT2Z" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.anker.com/us/products/a1289" target="_blank" rel="noopener">Anker<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.anker.com/products/a1289" target="_blank" rel="noopener">Anker US (esgotada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.amazon.com/dp/B09VPHVT2Z" target="_blank" rel="noopener">Amazon (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1145,7 +1151,7 @@
         </li>
         <li class="item" data-priority="essencial" data-sys="canon">
           <div class="item-select">
-            <input type="checkbox" id="i33" class="toggle" data-min="37" data-max="46" checked>
+            <input type="checkbox" id="i33" class="toggle" data-min="60" data-max="66" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i33">
@@ -1153,10 +1159,10 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">Compatível LP-E6N/LP-E6NH, com porta USB-C na própria bateria</span>
             </label>
-            <p class="item-desc">A 90D não carrega a bateria dentro da câmara (só tem porta Micro-USB de dados, ao contrário da Sony a6700). Estas baterias têm USB-C integrado e carregam no Anker 737 ou na EcoFlow RIVER 2 já previstos, sem o carregador de parede da Canon. Com a bateria da câmara, o pack de 2 dá 3 no total (mínimo definido para o projeto).</p>
+            <p class="item-desc">A 90D não carrega a bateria dentro da câmara (só tem porta Micro-USB de dados, ao contrário da Sony a6700). Estas baterias têm USB-C na própria bateria e carregam direto de um carregador ou de um power bank, como a EcoFlow RIVER 2 já prevista, sem o carregador de parede da Canon. Com a bateria da câmara, o pack de 2 dá 3 no total (mínimo definido para o projeto).</p>
             <p class="item-cut"><strong>Se cortar:</strong> Fica-se só com a bateria da câmara (~1.300 disparos). Em dias de campo sem tomada, a filmagem pára a meio do dia.</p>
             <div class="item-footer">
-              <div class="item-price">US$37 – 46 (pack de 2; US$43,49 na K&amp;F)</div>
+              <div class="item-price">US$60 – 66 (pack de 2; US$59,99 em promoção, US$65,99 normal)</div>
               <div class="item-links">
                 <a href="https://kfconcept.com/KF28.0033S1-lp-e6nh--2-batteries--battery-with-2600mah-capacity-and-type-c-fast-charging" target="_blank" rel="noopener">K&amp;F Concept<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
                 <a href="https://kentfaith.com/KF28.0033S1_2-pack-lp-e6nh-battery-with-2600mah-capacity-and-type-c-fast-charging-for-canon" target="_blank" rel="noopener">Kent Faith<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
@@ -1197,7 +1203,7 @@
       <ul class="items">
         <li class="item" data-priority="essencial">
           <div class="item-select">
-            <input type="checkbox" id="i16" class="toggle" data-min="135" data-max="195" checked>
+            <input type="checkbox" id="i16" class="toggle" data-min="135" data-max="330" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i16">
@@ -1205,34 +1211,34 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">SDSDXEP-128G-GN4IN — 3 unidades</span>
             </label>
-            <p class="item-desc"><span data-sys="sony">A a6700 só tem um slot</span><span data-sys="canon">A 90D também só tem um slot e aceita cartões UHS-II</span>: 3 cartões evitam ficar bloqueado à espera de descarregar o principal. US$45–65 cada.</p>
+            <p class="item-desc"><span data-sys="sony">A a6700 só tem um slot</span><span data-sys="canon">A 90D também só tem um slot e aceita cartões UHS-II</span>: 3 cartões evitam ficar bloqueado à espera de descarregar o principal. O Best Buy já não vende o modelo novo e a ProCam está esgotada (US$109,99 numa listagem, US$199,99 noutra); o preço atual por cartão não foi confirmado.</p>
             <p class="item-cut"><strong>Se cortar:</strong> A câmara tem um só slot: com menos cartões, é preciso parar para descarregar.</p>
             <div class="item-footer">
-              <div class="item-price">US$135 – 195</div>
+              <div class="item-price">Preço não confirmado (≈ US$135 – 330 por 3 cartões)</div>
               <div class="item-links">
-                <a href="https://www.bestbuy.com/product/sandisk-128gb-extreme-pro-sdxc-uhs-ii-v60-memory-card-r-w-up-to-280-100mb-s/JXJ62C6F2W" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://procam.com/products/sandisk-extreme-pro-uhs-ii-sdxc-memory-card-128gb-1" target="_blank" rel="noopener">ProCam<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1754812-REG/sandisk_sdsdxep_128g_ancin_extreme_pro_sdxc_uhs_ii.html" target="_blank" rel="noopener">B&amp;H (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://procam.com/products/sandisk-extreme-pro-uhs-ii-sdxc-memory-card-128gb" target="_blank" rel="noopener">ProCam (esgotado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="essencial">
           <div class="item-select">
-            <input type="checkbox" id="i17" class="toggle" data-min="180" data-max="330" checked>
+            <input type="checkbox" id="i17" class="toggle" data-min="480" data-max="540" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i17">
-              <h3>SanDisk Extreme Portable SSD V2 1TB</h3>
+              <h3>SanDisk Extreme Portable SSD 1TB (V2 ou V3)</h3>
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">SDSSDE61-1T00-G25 — 2 unidades</span>
             </label>
-            <p class="item-desc">Backup diário dos cartões, em dois discos (não um) guardados em sítios diferentes. IP55, 1.050 MB/s, USB-C. US$90–165 cada.</p>
+            <p class="item-desc">Backup diário dos cartões, em dois discos (não um) guardados em sítios diferentes. IP55, 1.050 MB/s, USB-C. Best Buy: V2 (SDSSDE61-1T00-G25) a US$239,99. A V3 (SDSSDE70-1T00-G25) custa US$269,99 na Adorama e substitui a V2.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Sem backup diário, um cartão perdido é um dia de produção que não se recupera.</p>
             <div class="item-footer">
-              <div class="item-price">US$180 – 330</div>
+              <div class="item-price">US$480 – 540 (2 unidades)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/1595431-REG" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.amazon.com/s?k=SanDisk+Extreme+Portable+SSD+1TB+SDSSDE61-1T00-G25" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bestbuy.com/site/-/6427550.p" target="_blank" rel="noopener">Best Buy (V2)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1595431-REG" target="_blank" rel="noopener">B&amp;H (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1249,7 +1255,7 @@
       <ul class="items">
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i18" class="toggle" data-min="128" data-max="160" checked>
+            <input type="checkbox" id="i18" class="toggle" data-min="160" data-max="160" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i18">
@@ -1260,10 +1266,10 @@
             <p class="item-desc">Carga até 8kg, altura 85–186cm.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Entrevistas e planos gerais ficam à mão livre.</p>
             <div class="item-footer">
-              <div class="item-price">US$128 – 160</div>
+              <div class="item-price">US$159,99 (AD-01 V2, modelo 3751B)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/1774976-REG/smallrig_3751b_ad_01_heavy_duty_tripod_with.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.adorama.com/specials/l/SmallRig~Photography" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.glazerscamera.com/collections/video-tripod-kits/products/srg-fluid-hd-tripod-ad-01-v2" target="_blank" rel="noopener">Glazer's (esgotado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1774976-REG/smallrig_3751b_ad_01_heavy_duty_tripod_with.html" target="_blank" rel="noopener">B&amp;H (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1301,7 +1307,7 @@
       <ul class="items">
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i19" class="toggle" data-min="285" data-max="300" checked>
+            <input type="checkbox" id="i19" class="toggle" data-min="250" data-max="286" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i19">
@@ -1312,17 +1318,17 @@
             <p class="item-desc">Transporte diário do kit, com proteção de base contra chuva e poeira.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Uma mochila simples com capa de chuva poupa cerca de US$60–150 sem tirar o transporte protegido.</p>
             <div class="item-footer">
-              <div class="item-price">US$285 – 300</div>
+              <div class="item-price">US$250 – 286 (Adorama sob encomenda até 21/12/2026)</div>
               <div class="item-links">
                 <a href="https://robertscamera.com/lwp-flipside-400-aw-iii" target="_blank" rel="noopener">Robert's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.glazerscamera.com/collections/all/products/flipside-400-aw-iii" target="_blank" rel="noopener">Glazer's Camera<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/lpfsbp400bk.html" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="essencial">
           <div class="item-select">
-            <input type="checkbox" id="i20" class="toggle" data-min="40" data-max="60" checked>
+            <input type="checkbox" id="i20" class="toggle" data-min="40" data-max="40" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i20">
@@ -1330,20 +1336,20 @@
               <span class="badge badge-essencial">Essencial</span>
               <span class="item-model">Capa de chuva extra-longa para câmara + lente + tripé — 2 unidades</span>
             </label>
-            <p class="item-desc">Permite continuar a filmar em chuva leve/moderada, com acesso aos controlos. US$20–30 cada.</p>
+            <p class="item-desc">Permite continuar a filmar em chuva leve/moderada, com acesso aos controlos. O CRC-03 (extra-longo, para câmara, lente e tripé) está esgotado na Movo. A Adorama vende o CRC-17, mais pequeno (17 × 14,5 pol.), que a página indica para lentes de 28–80mm: não cobre a 75-300mm.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Com chuva média é preciso parar de filmar. Uma capa é o mínimo.</p>
             <div class="item-footer">
-              <div class="item-price">US$40 – 60</div>
+              <div class="item-price">US$20 cada (≈ US$40 as 2)</div>
               <div class="item-links">
-                <a href="https://www.adorama.com/l/Photography/Photography-Bags-and-Cases/Movo-Photo~Camera-Rain-Covers" target="_blank" rel="noopener">Adorama<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://movophoto.com/products/movo-crc-camera-rain-cover" target="_blank" rel="noopener">Movo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://movophoto.com/products/long-waterproof-rain-coat-gray" target="_blank" rel="noopener">Movo CRC-03 (esgotada)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.adorama.com/mvcrc17.html" target="_blank" rel="noopener">Adorama CRC-17 (serve lentes até 80mm)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="recomendado">
           <div class="item-select">
-            <input type="checkbox" id="i21" class="toggle" data-min="38" data-max="67" checked>
+            <input type="checkbox" id="i21" class="toggle" data-min="39" data-max="42" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i21">
@@ -1354,10 +1360,10 @@
             <p class="item-desc">Protege a equipa e itens sensíveis à água — cartões, baterias, microfones — quando a chuva é forte demais para continuar a gravar.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Cartões, baterias e microfones ficam sem proteção quando a chuva é forte.</p>
             <div class="item-footer">
-              <div class="item-price">US$38 – 67</div>
+              <div class="item-price">US$39 – 42 (poncho US$21,99 + saco 5–8L US$17–20)</div>
               <div class="item-links">
-                <a href="https://froggtoggs.com/womens/womens-rain-ponchos" target="_blank" rel="noopener">Frogg Toggs<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.dickssportinggoods.com/a/sea-to-summit-dry-bag-0anz01c.html" target="_blank" rel="noopener">Dick's Sporting Goods<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.walmart.com/ip/46519914" target="_blank" rel="noopener">Walmart (poncho Ultra-Lite2)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.dickssportinggoods.com/a/lightweight-dry-bag-0rtz07a.html" target="_blank" rel="noopener">Dick's (saco estanque Sea to Summit)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1395,7 +1401,7 @@
       <ul class="items">
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="radio" name="drone" id="i22" class="toggle" data-min="259" data-max="349">
+            <input type="radio" name="drone" id="i22" class="toggle" data-min="295" data-max="295">
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i22">
@@ -1405,17 +1411,16 @@
             </label>
             <p class="item-desc">A mais barata e leve das três (135g). Decola sem controlo e segue o sujeito automaticamente, mas sem sensores de obstáculo frontais — boa para planos rápidos e casuais.</p>
             <div class="item-footer">
-              <div class="item-price">US$259 – 349</div>
+              <div class="item-price">US$295 (Best Buy; indisponível em novo na consulta)</div>
               <div class="item-links">
-                <a href="https://www.amazon.com/s?k=DJI+Neo+Fly+More+Combo+RC-N3" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://store.dji.com/product/dji-neo" target="_blank" rel="noopener">DJI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bestbuy.com/product/dji-neo-fly-more-combo-ultralight-4k-self-flying-mini-drone-palm-takeoff-subject-tracking-propeller-guard/CZ9GHLF88K" target="_blank" rel="noopener">Best Buy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="radio" name="drone" id="i23" class="toggle" data-min="339" data-max="449">
+            <input type="radio" name="drone" id="i23" class="toggle" data-min="449" data-max="449">
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i23">
@@ -1423,19 +1428,18 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Fly More Combo — opção 2</span>
             </label>
-            <p class="item-desc">Equilíbrio entre preço e robustez: sub-249g, 4K/30fps com gimbal de 3 eixos, resistência a vento nível 5 — relevante nos dias de planalto/montanha. Sem sensores omnidirecionais.</p>
+            <p class="item-desc">Equilíbrio entre preço e robustez: sub-249g, 4K/30fps com gimbal de 3 eixos, resistência a vento nível 5 — relevante nos dias de planalto/montanha. Sem sensores omnidirecionais. Atenção: a DJI está na lista FCC Covered List desde 22/12/2025; unidades já autorizadas ainda podem ser vendidas, o que limita o stock nos EUA.</p>
             <div class="item-footer">
-              <div class="item-price">US$339 – 449</div>
+              <div class="item-price">US$449 (Sweetwater, 5 em stock)</div>
               <div class="item-links">
-                <a href="https://www.amazon.com/s?k=DJI+Mini+4K+Fly+More+Combo" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://store.dji.com/product/dji-mini-4k" target="_blank" rel="noopener">DJI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.sweetwater.com/store/detail/Mini4KFM" target="_blank" rel="noopener">Sweetwater<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
         </li>
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="radio" name="drone" id="i24" class="toggle" data-min="429" data-max="599" checked>
+            <input type="radio" name="drone" id="i24" class="toggle" data-min="429" data-max="429" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i24">
@@ -1443,12 +1447,12 @@
               <span class="badge badge-importante">Importante</span>
               <span class="item-model">Fly More Combo, com RC-N3 — opção 3</span>
             </label>
-            <p class="item-desc">A mais completa dentro do teto: 4K/60fps, sensores omnidirecionais assistidos por LiDAR — a única das três com essa proteção — leve (~151g), 3 baterias no combo.</p>
+            <p class="item-desc">A mais completa dentro do teto: 4K/60fps, sensores omnidirecionais assistidos por LiDAR — a única das três com essa proteção — leve (~151g), 3 baterias no combo. Não foi lançada oficialmente pela DJI nos EUA: vende-se por revendedores, e a DJI está na lista FCC Covered List desde 22/12/2025.</p>
             <div class="item-footer">
-              <div class="item-price">US$429 – 599</div>
+              <div class="item-price">US$429 (Drone Nerds e Walmart/Adorama; combo com RC-N3)</div>
               <div class="item-links">
-                <a href="https://www.amazon.com/s?k=DJI+Neo+2+Fly+More+Combo+RC-N3" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://store.dji.com/product/dji-neo-2" target="_blank" rel="noopener">DJI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.dronenerds.com/collections/dji-neo/products/dji-neo-2-fly-more-combo-rc-n3" target="_blank" rel="noopener">Drone Nerds<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.walmart.com/ip/19366469697" target="_blank" rel="noopener">Walmart (vendido pela Adorama)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1479,7 +1483,7 @@
       <ul class="items">
         <li class="item" data-priority="importante">
           <div class="item-select">
-            <input type="checkbox" id="i25" class="toggle" data-min="18" data-max="22" checked>
+            <input type="checkbox" id="i25" class="toggle" data-min="20" data-max="20" checked>
           </div>
           <div class="item-body">
             <label class="item-toggle" for="i25">
@@ -1490,10 +1494,9 @@
             <p class="item-desc">Unidade recarregável (~6h) que fica dentro da mochila a absorver humidade continuamente, sem consumíveis.</p>
             <p class="item-cut"><strong>Se cortar:</strong> Risco real de fungo nas lentes ao fim de sete dias húmidos, e custa pouco.</p>
             <div class="item-footer">
-              <div class="item-price">US$18 – 22</div>
+              <div class="item-price">US$19,99 (preço de agregador)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/accessories/Dehumidifiers-for-the-Pelican-1569/389340-REG-72947" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.amazon.com/s?k=Ruggard+Renewable+Dehumidifier+Desiccant+USB-C+RD-10" target="_blank" rel="noopener">Amazon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1915253-REG/ruggard_rd_10_renewable_dehumidifier_desiccant_usb_c.html" target="_blank" rel="noopener">B&amp;H<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
@@ -1511,10 +1514,9 @@
             <p class="item-desc">Complementa a unidade acima dentro dos estojos individuais de lente/câmara. Reutilizável no forno a ~150°C. US$10–12 cada.</p>
             <p class="item-cut"><strong>Se cortar:</strong> O desumidificador cobre a mochila; este protege os estojos individuais.</p>
             <div class="item-footer">
-              <div class="item-price">US$20 – 24</div>
+              <div class="item-price">US$20 – 24 (não confirmado)</div>
               <div class="item-links">
-                <a href="https://www.bhphotovideo.com/c/product/1022198-REG/ruggard_sg_dc1_reusable_silica_gel_desiccant.html" target="_blank" rel="noopener">B&amp;H Photo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
-                <a href="https://www.bhphotovideo.com/c/product/1958284-REG/ruggard_reusable_silicon_dioxide_fabric.html" target="_blank" rel="noopener">B&amp;H (saquetas)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
+                <a href="https://www.bhphotovideo.com/c/product/1022198-REG/ruggard_sg_dc1_reusable_silica_gel_desiccant.html" target="_blank" rel="noopener">B&amp;H (não confirmado)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 5h5v5M19 5l-9 9M8 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2"/></svg></a>
               </div>
             </div>
           </div>
